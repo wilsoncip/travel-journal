@@ -1,0 +1,27 @@
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "Raleway", sans-serif;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 8fr;
+  grid-template-areas:
+    "header header"
+    "title-img title"
+    "body-1 body-1";
+}
+
+.header {
+  grid-area: header;
+}
+.title-img {
+  grid-area: title-img;
+}
+.title {
+  grid-area: title;
+}
+.body-1 {
+  grid-area: body-1;
+}

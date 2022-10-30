@@ -1,0 +1,40 @@
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "Raleway", sans-serif;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 2fr 7fr;
+  grid-template-areas:
+    "header header"
+    "body-1 body-1"
+    "body-2 body-3"
+    "body-2 body-4"
+    "form form";
+}
+
+.header {
+  grid-area: header;
+}
+
+.body-1 {
+  grid-area: body-1;
+}
+
+.body-2 {
+  grid-area: body-2;
+}
+
+.body-3 {
+  grid-area: body-3;
+}
+
+.body-4 {
+    grid-area: body-4;
+  }
+
+.form {
+    grid-area: form;
+}

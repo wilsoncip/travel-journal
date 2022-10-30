@@ -1,12 +1,192 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <script
+      src="https://kit.fontawesome.com/490f2ad19e.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Source+Sans+Pro"
+    />
+    <link rel="stylesheet" href="styles/hw2-w3schools.css" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Raleway"
+    />
+    <link rel="stylesheet" href="styles/layout-contactpage.css" />
+    <link rel="stylesheet" href="styles/navbar.css" />
     <title>Contact Page</title>
-</head>
-<body>
-    
-</body>
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <style>
+      .body-1 {
+        display: flex;
+        margin: 20px;
+        font-size: 30px;
+        /* background-color: aliceblue; */
+      }
+
+      img {
+        width: 160px;
+      }
+
+      .body-2 {
+        display: flex;
+        justify-content: center;
+        /* background-color: aliceblue; */
+      }
+
+      .body-3 {
+        display: flex;
+        margin-right: 50%;
+        margin-bottom: 0%;
+        align-items: center;
+      }
+
+      .body-4 {
+        margin-top: 10px;
+      }
+      .body-4 a {
+        padding: 0 5px;
+        color: navy;
+      }
+
+      .form{
+        font-size: 12px;
+      }
+
+      form {
+        background-color: white;
+        padding: 20px;
+        width: 400px;
+      }
+      input{
+        margin-left: 5px;
+        width: 200px;
+      }
+      input, textarea{
+        font-family: "Raleway", sans-serif;
+        font-size: 10px;
+      }
+
+      button{
+        font-family: "Raleway", sans-serif;
+        font-size: 10px;
+        border-radius: 15px;
+        padding:2px 8px;
+        border: 0;
+        color: black;
+        background-color: lightgrey;
+      }
+
+      fieldset {
+        border-color: lightgray;
+        border-style: solid;
+      }
+      legend {
+        font-weight: bold;
+      }
+      .formtext {
+        margin: 10px 0;
+      }
+      .lessspace {
+        margin-bottom: 2px;
+      }
+
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <div class="nav-items">
+          <a class="nav-links" href="index.html">Home</a>
+        </div>
+        <div class="nav-items">
+          <a class="nav-links" href="#">Country Profiles</a>
+        </div>
+        <div class="nav-items">
+          <a class="nav-links" href="japan.html">Japan</a>
+        </div>
+        <div class="nav-items">
+          <a class="nav-links" href="iceland.html">Iceland</a>
+        </div>
+        <div class="nav-items">
+          <a class="nav-links" href="canada.html">Canada</a>
+        </div>
+        <div class="nav-items">
+          <a class="nav-links" href="contact.html">Contact</a>
+        </div>
+      </div>
+      <div class="body-1">Contact Page: Wilson Ciputra</div>
+      <div class="body-2">
+        <img
+          src="images/wilson-portrait.jpg"
+          alt="wilson ciputra"
+          title="Portrait of Wilson"
+        />
+      </div>
+      <div class="body-3">
+        Wilson Ciputra is from Jakarta, Indonesia, who is currently studying at
+        Babson College. He is a 22 year old and he enjoys travling around the
+        world and visitng new places. Whenever he travles, he always seeks
+        places that are rich in nature and culinary experiences.
+      </div>
+      <div class="body-4">
+        <a href="https://www.instagram.com/wilsoncipt/"
+          ><i class="fa-brands fa-square-instagram fa-lg"></i></a
+        ><a href="https://www.linkedin.com/in/wilsonciputra/"
+          ><i class="fa-brands fa-linkedin fa-lg"></i></a
+        ><a href="mailto: wciputra1@babson.edu"
+          ><i class="fa-solid fa-square-envelope fa-lg"></i
+        ></a>
+      </div>
+      <div class="form">
+        <form action="https://oim-apis.herokuapp.com/form" method="post">
+          <fieldset>
+            <legend>Contact Me</legend>
+            <div class="formtext">
+              <label for="name">Your Name:</label>
+              <input
+                type="text"
+                name="name"
+                id="name"
+                placeholder="Enter your name here"
+              />
+            </div>
+            <div class="formtext">
+              <label for="email">Your Email:</label>
+              <input
+                type="email"
+                name="email"
+                id="email"
+                placeholder="Enter your email here"
+              />
+            </div>
+            <div class="formtext">
+            </div>
+            <div class="formtext">
+            </div>
+            <div class="formtext">
+              <p class="lessspace">Comments:</p>
+              <div>
+                <textarea
+                  name="comments"
+                  id="comments"
+                  rows="5"
+                  cols="50"
+                ></textarea>
+              </div>
+            </div>
+            <div class="formtext">
+              <button type="submit" name="submit" value="Submit">Submit</button>
+              <button type="reset" name="reset" value="Reset">Reset</button>
+            </div>
+          </fieldset>
+        </form>
+      </div>
+    </div>
+  </body>
 </html>

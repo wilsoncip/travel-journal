@@ -9,9 +9,18 @@
       href="https://fonts.googleapis.com/css?family=Raleway"
     />
     <link rel="stylesheet" href="styles/layout-homepage.css" />
-    <link rel="stylesheet" href="styles/navbar.css">
+    <link rel="stylesheet" href="styles/navbar.css" />
+    <link rel="stylesheet" href="styles/sitemap.css">
     <title>Wilson's Travel Journal</title>
+    <link rel="icon" type="image/png" href="images/favicon.png">
     <style>
+      .header {
+        display: flex;
+        background-color: darkslategrey;
+        width: 100%;
+        height: 40px;
+      }
+
       .body-1 {
         display: grid;
         height: 250px;
@@ -41,23 +50,18 @@
       #title {
         grid-area: title;
       }
-
       #img1 {
         grid-area: img1;
       }
-
       #img2 {
         grid-area: img2;
       }
-
       #text1 {
         grid-area: text1;
       }
-
       #text2 {
         grid-area: text2;
       }
-
 
       /* body-1 styles */
 
@@ -72,19 +76,17 @@
       .headline-btn {
         width: 160px;
         font-size: 12px;
-        margin-top: -90px;
-        margin-left: auto;
-        margin-right: auto;
-        border: 0ch;
-        background-color: rgba(0, 0, 0, 0.73);
-        color: white;
-        border-radius: 15px;
-        padding: 4px 2px;
         font-family: "Raleway", sans-serif;
+        margin: -90px auto 0;
+        padding: 4px 2px;
+        border: 0;
+        border-radius: 15px;
+        background-color: rgba(0, 0, 0, 0.75);
+        color: white;
       }
 
       .headline-btn:hover {
-        background-color: rgba(0, 0, 0, 0.502);
+        background-color: rgba(0, 0, 0, 0.5);
         cursor: pointer;
       }
 
@@ -141,20 +143,6 @@
         margin: 20px;
         text-align: justify;
       }
-
-      /* sitemap styles */
-
-      #sitemap {
-        font-size: 7px;
-        text-decoration: none;
-        color: white;
-        margin: 20px;
-      }
-
-      #sitemap-container {
-        background-color: rgb(143, 193, 193);
-        height: 20px;
-      }
     </style>
   </head>
   <body>
@@ -182,36 +170,51 @@
         <button class="headline-btn">See Where I've Been To</button>
       </div>
       <div class="body-2">
-        <div class="heading-font" id="title">Journal Entries</div>
+        <div class="heading-font" id="title">Recent Journal Entries</div>
         <div id="img1">
           <img
             class="body-img"
             src="images/dotonburi-small.jpg"
             alt="dotonburi"
+            title="Dotonburi District"
           />
         </div>
         <div class="body-text" id="text1">
           <div class="item-head">Japan</div>
-          <div class="item-body">This is a country full off...</div>
+          <div class="item-body">
+            This is a country is rich with culutre and history. In between its
+            buslting cities and traditional temples, you can never get border of
+            this beutiful country.
+          </div>
           <a href="japan.html" class="item-link">Click here to read more</a>
         </div>
         <div id="img2">
           <img
             class="body-img"
-            src="images/skagfoss-small.jpg"
-            alt="skagfoss"
+            src="images/skogafoss-small.jpg"
+            alt="skogafoss"
+            title="The Waterfall Skogafoss"
           />
         </div>
         <div class="body-text" id="text2">
           <div class="item-head">Iceland</div>
-          <div class="item-body">This is a country full off...</div>
+          <div class="item-body">
+            The prefect getaway for those tired of city life. Lushious green
+            plains as far as the eyes can see. This country holds some of the
+            most beutiful views that can't be found anwhere else in the world.
+          </div>
           <a href="japan.html" class="item-link">Click here to read more</a>
         </div>
       </div>
       <div class="side">
-        <div class="heading-font" id="side-title">About Author</div>
+        <div class="heading-font" id="side-title">About the Author</div>
         <div id="side-img-container">
-          <img id="side-img" src="images/wilson-portrait.jpg" alt="wilson" />
+          <img
+            id="side-img"
+            src="images/wilson-portrait.jpg"
+            alt="wilson"
+            title="Portrait of Wilson Ciputra"
+          />
         </div>
         <div id="side-text">
           Wilson Ciputra is from Jakarta, Indonesia, who is currently studying
