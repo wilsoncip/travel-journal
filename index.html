@@ -4,35 +4,225 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Raleway"
+    />
+    <link rel="stylesheet" href="styles/layout-homepage.css" />
+    <link rel="stylesheet" href="styles/navbar.css">
     <title>Wilson's Travel Journal</title>
     <style>
-      body{
-        padding: 0;
-        margin: 0;
-      }
-      h1 {
-        font-family: Helvetica, sans-serif;
+      .body-1 {
+        display: grid;
+        height: 250px;
+        justify-content: center;
+        align-items: center;
+        background-image: url("images/main-back.jpg");
+        background-size: cover;
       }
 
-      .header{
-        background-color: darkslategrey;
+      .body-2 {
+        display: grid;
+        margin: 0 30px;
+        margin-bottom: 20px;
+        grid-template-columns: 2fr 5fr;
+        grid-template-areas:
+          "title title"
+          "img1 text1"
+          "img2 text2";
+      }
+
+      .side {
+        background-color: rgba(247, 240, 240, 0.98);
+      }
+
+      /* body-2 grid areas*/
+
+      #title {
+        grid-area: title;
+      }
+
+      #img1 {
+        grid-area: img1;
+      }
+
+      #img2 {
+        grid-area: img2;
+      }
+
+      #text1 {
+        grid-area: text1;
+      }
+
+      #text2 {
+        grid-area: text2;
+      }
+
+
+      /* body-1 styles */
+
+      .headline {
+        margin-top: 80px;
+        font-family: "Raleway", sans-serif;
+        font-size: 30px;
+        font-weight: bold;
+        color: rgba(32, 32, 32, 0.873);
+      }
+
+      .headline-btn {
+        width: 160px;
+        font-size: 12px;
+        margin-top: -90px;
+        margin-left: auto;
+        margin-right: auto;
+        border: 0ch;
+        background-color: rgba(0, 0, 0, 0.73);
+        color: white;
+        border-radius: 15px;
+        padding: 4px 2px;
+        font-family: "Raleway", sans-serif;
+      }
+
+      .headline-btn:hover {
+        background-color: rgba(0, 0, 0, 0.502);
+        cursor: pointer;
+      }
+
+      /* body-2 styles */
+      .heading-font {
+        font-size: 26px;
+        font-weight: bold;
+        margin: 18px;
+      }
+
+      .body-img {
+        width: 120px;
+        margin: 10px 20px;
+        margin-left: 50px;
+      }
+
+      .body-text {
+        margin: 12px 20px;
+        margin-left: 0px;
+      }
+
+      /* inside body-2 styles */
+      .item-head {
+        font-size: 24px;
+        font-weight: 500;
+      }
+
+      .item-body {
+        font-size: 12px;
+        margin: 10px 0px;
+      }
+
+      .item-link {
+        font-size: 8px;
+        color: black;
+      }
+
+      /* side styles */
+
+      #side-title {
+        text-align: center;
+      }
+
+      #side-img-container {
         display: flex;
-        width: 100%;
-        height: 50px;
+        justify-content: center;
+      }
+      #side-img {
+        width: 100px;
       }
 
-      .main-1{
-        background-color: aliceblue;
-        height: 800px;
+      #side-text {
+        font-size: 12px;
+        margin: 20px;
+        text-align: justify;
+      }
+
+      /* sitemap styles */
+
+      #sitemap {
+        font-size: 7px;
+        text-decoration: none;
+        color: white;
+        margin: 20px;
+      }
+
+      #sitemap-container {
+        background-color: rgb(143, 193, 193);
+        height: 20px;
       }
     </style>
   </head>
   <body>
-    <div class="header">
-
+    <div class="container">
+      <div class="header">
+        <div class="nav-items"><a class="nav-links" href="#">Home</a></div>
+        <div class="nav-items">
+          <a class="nav-links" href="#">Country Profiles</a>
+        </div>
+        <div class="nav-items">
+          <a class="nav-links" href="japan.html">Japan</a>
+        </div>
+        <div class="nav-items">
+          <a class="nav-links" href="iceland.html">Iceland</a>
+        </div>
+        <div class="nav-items">
+          <a class="nav-links" href="canada.html">Canada</a>
+        </div>
+        <div class="nav-items">
+          <a class="nav-links" href="contact.html">Contact</a>
+        </div>
+      </div>
+      <div class="body-1">
+        <div class="headline">Wilson's Travel Journal</div>
+        <button class="headline-btn">See Where I've Been To</button>
+      </div>
+      <div class="body-2">
+        <div class="heading-font" id="title">Journal Entries</div>
+        <div id="img1">
+          <img
+            class="body-img"
+            src="images/dotonburi-small.jpg"
+            alt="dotonburi"
+          />
+        </div>
+        <div class="body-text" id="text1">
+          <div class="item-head">Japan</div>
+          <div class="item-body">This is a country full off...</div>
+          <a href="japan.html" class="item-link">Click here to read more</a>
+        </div>
+        <div id="img2">
+          <img
+            class="body-img"
+            src="images/skagfoss-small.jpg"
+            alt="skagfoss"
+          />
+        </div>
+        <div class="body-text" id="text2">
+          <div class="item-head">Iceland</div>
+          <div class="item-body">This is a country full off...</div>
+          <a href="japan.html" class="item-link">Click here to read more</a>
+        </div>
+      </div>
+      <div class="side">
+        <div class="heading-font" id="side-title">About Author</div>
+        <div id="side-img-container">
+          <img id="side-img" src="images/wilson-portrait.jpg" alt="wilson" />
+        </div>
+        <div id="side-text">
+          Wilson Ciputra is from Jakarta, Indonesia, who is currently studying
+          at Babson College. He is a 22 year old and he enjoys travling around
+          the world and visitng new places. Whenever he travles, he always seeks
+          places that are rich in nature and culinary experiences.
+        </div>
+      </div>
     </div>
-    <div class="main-1">
-
+    <div id="sitemap-container">
+      <a href="sitemap.html" id="sitemap">Sitemap</a>
     </div>
   </body>
 </html>
