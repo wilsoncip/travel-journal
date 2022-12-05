@@ -1,8 +1,9 @@
+/* Page Setup CSS */
 body {
   padding: 0;
   margin: 0;
   font-family: "Raleway", sans-serif;
-  font-size: 26px;
+  font-size: 20px;
 }
 
 .container {
@@ -11,7 +12,8 @@ body {
   grid-template-areas:
     "header header"
     "title-img title"
-    "body-1 body-1";
+    "body-1 body-1"
+    "sitemap sitemap";
 }
 
 .header {
@@ -23,6 +25,88 @@ body {
 .title {
   grid-area: title;
 }
-.body-1 {
+.body-main {
   grid-area: body-1;
+}
+
+#sitemap-container {
+  grid-area: sitemap;
+}
+
+/* Title CSS */
+h1 {
+  font-size: 80px;
+  font-weight: bold;
+  white-space: nowrap;
+  margin: 0;
+}
+
+.title {
+  margin: 10px 20px;
+  margin-top: 20px;
+  margin-left: 20px;
+}
+div.title-img img {
+  width: 150px;
+  margin: 10px;
+  margin-top: 20px;
+  margin-left: 40px;
+  margin-right: 0;
+  box-shadow: 2px 2px darkgray;
+  /* border: 1px solid darkgray; */
+}
+
+/* Main body CSS */
+
+.body-main {
+  background-color: rgb(228, 228, 228);
+  border-radius: 40px;
+  margin: 20px 40px;
+  margin-top: 10px;
+}
+
+.body-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.body-text {
+  margin: 0 80px 20px;
+}
+
+.img-container {
+  grid-template-columns: 1fr;
+  height: 500px;
+  margin: 10px 40px;
+  justify-items: center;
+  display: flex;
+}
+
+#main-frame {
+  height: 100%;
+  border-radius: 40px;
+}
+
+i {
+  color: rgb(141, 141, 141);
+  background-color: lightgrey;
+  border-radius: 100px;
+  padding: 20px;
+  margin: 0 40px;
+  /* flex-basis: 50px;
+  flex-grow: 0;
+  flex-shrink: 0; */
+}
+
+.switch:hover {
+  cursor: pointer;
+}
+
+i:hover {
+  background-color: rgb(204, 204, 204);
+}
+
+h2 {
+  text-align: center;
 }

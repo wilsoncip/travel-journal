@@ -1,11 +1,12 @@
-      #sitemap {
-        font-size: 18px;
-        text-decoration: none;
-        color: white;
-        margin: 10px;
-      }
+#sitemap {
+  font-size: 18px;
+  text-decoration: none;
+  color: white;
+}
 
-      #sitemap-container {
-        background-color: rgb(143, 193, 193);
-        height: 38px;
-      }
+#sitemap-container {
+  background-color: rgb(143, 193, 193);
+  height: 15px;
+  padding: 10px 30px 18px;
+  margin-top: 40px;
+}

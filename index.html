@@ -14,54 +14,16 @@
     <title>Wilson's Travel Journal</title>
     <link rel="icon" type="image/png" href="images/favicon.png" />
     <style>
+      /* body-1 styles */
       .body-1 {
-        display: grid;
-        height: 400px;
-        justify-content: center;
-        align-items: center;
         background-image: url("images/main-back.jpg");
         background-size: cover;
       }
 
-      .body-2 {
-        display: grid;
-        margin: 0 30px;
-        margin-bottom: 20px;
-        grid-template-columns: 2fr 5fr;
-        grid-template-areas:
-          "title title"
-          "img1 text1"
-          "img2 text2";
-      }
-
-      .side {
-        background-color: rgba(247, 240, 240, 0.98);
-      }
-
-      /* body-2 grid areas*/
-
-      #title {
-        grid-area: title;
-      }
-      #img1 {
-        grid-area: img1;
-      }
-      #img2 {
-        grid-area: img2;
-      }
-      #text1 {
-        grid-area: text1;
-      }
-      #text2 {
-        grid-area: text2;
-      }
-
-      /* body-1 styles */
-
       .headline {
         margin-top: 80px;
         font-family: "Raleway", sans-serif;
-        font-size: 50px;
+        font-size: 70px;
         font-weight: bold;
         color: rgba(32, 32, 32, 0.873);
       }
@@ -70,7 +32,7 @@
         width: 260px;
         font-size: 20px;
         font-family: "Raleway", sans-serif;
-        margin: -200px auto 0;
+        margin: -180px auto 0;
         padding: 4px 2px;
         border: 0;
         border-radius: 15px;
@@ -83,62 +45,54 @@
         cursor: pointer;
       }
 
+      #click {
+        text-decoration: none;
+        color: white;
+      }
+
       /* body-2 styles */
-      .heading-font {
-        font-size: 35px;
-        font-weight: bold;
-        margin: 18px;
+
+      /* .title */
+
+      .item-img {
+        width: 80%;
+        min-width: 150px;
       }
 
-      .body-img {
-        width: 240px;
-        margin: 10px 20px;
-        margin-left: 50px;
-      }
-
-      .body-text {
-        margin: 12px 20px;
-        margin-left: 0px;
-      }
-
-      /* inside body-2 styles */
       .item-head {
-        font-size: 30px;
+        font-size: 40px;
         font-weight: 500;
+        margin: 0;
       }
 
       .item-body {
-        font-size: 20px;
         margin: 10px 0px;
       }
 
       .item-link {
-        font-size: 18px;
+        font-size: 16px;
         color: black;
       }
 
       /* side styles */
 
-      #side-title {
+      .side-title {
+        font-size: 35px;
+        font-weight: bold;
         text-align: center;
       }
 
-      #side-img-container {
+      .side-img-container {
         display: flex;
         justify-content: center;
       }
-      #side-img {
-        width: 100px;
+      .side-img {
+        width: 50%;
       }
 
-      #side-text {
-        font-size: 12px;
+      .side-text {
         margin: 20px;
         text-align: justify;
-      }
-      #click {
-        text-decoration: none;
-        color: white;
       }
     </style>
   </head>
@@ -147,76 +101,98 @@
       <div class="header">
         <div class="nav-items"><a class="nav-links" href="#">Home</a></div>
         <div class="nav-items">
-          <a class="nav-links" href="japan.html">Japan</a>
+          <a class="nav-links" href="profiles">Country Profiles</a>
         </div>
         <div class="nav-items">
-          <a class="nav-links" href="iceland.html">Iceland</a>
-        </div>
-        <div class="nav-items">
-          <a class="nav-links" href="canada.html">Canada</a>
+          <div class="dropbutton">
+            <span class="pads nav-links">Journal Entries</span>
+            <div class="dropdown">
+              <a class="nav-items nav-links dropitems" href="japan.html"
+                >Japan</a
+              >
+              <a class="nav-items nav-links dropitems" href="iceland.html"
+                >Iceland</a
+              >
+              <a class="nav-items nav-links dropitems" href="canada.html"
+                >Canada</a
+              >
+            </div>
+          </div>
         </div>
         <div class="nav-items">
           <a class="nav-links" href="contact.html">Contact</a>
         </div>
       </div>
+
       <div class="body-1">
         <div class="headline">Wilson's Travel Journal</div>
         <button class="headline-btn">
           <a id="click" href="japan.html">See Where I've Been To</a>
         </button>
       </div>
+
       <div class="body-2">
-        <div class="heading-font" id="title">Recent Journal Entries</div>
+        <h1 class="title" id="title">Recent Journal Entries</h1>
+
         <div id="img1">
           <img
-            class="body-img"
+            class="item-img"
             src="images/dotonburi-small.jpg"
             alt="dotonburi"
             title="Dotonburi District"
           />
         </div>
+
         <div class="body-text" id="text1">
-          <div class="item-head">Japan</div>
-          <div class="item-body">
+          <h2 class="item-head">Japan</h2>
+          <p class="item-body">
             This is a country that is rich with culture and history. In between
             its busteling cities and traditional temples, you can never get
             bored of this beautiful country.
-          </div>
+          </p>
           <a href="japan.html" class="item-link">Click here to read more</a>
         </div>
+
         <div id="img2">
           <img
-            class="body-img"
+            class="item-img"
             src="images/skogafoss-small.jpg"
             alt="skogafoss"
             title="The Waterfall Skogafoss"
           />
         </div>
+
         <div class="body-text" id="text2">
-          <div class="item-head">Iceland</div>
-          <div class="item-body">
+          <h2 class="item-head">Iceland</h2>
+          <p class="item-body">
             The perfect getaway for those tired of city life. Lushious green
             plains as far as the eyes can see. This country holds some of the
             most beautiful views that can't be found anywhere else in the world.
-          </div>
+          </p>
           <a href="japan.html" class="item-link">Click here to read more</a>
         </div>
       </div>
+
       <div class="side">
-        <div class="heading-font" id="side-title">About the Author</div>
-        <div id="side-img-container">
+        <h2 class="side-title">About the Author</h2>
+        <div class="side-img-container">
           <img
-            id="side-img"
+            class="side-img"
             src="images/wilson-portrait.jpg"
             alt="wilson"
             title="Portrait of Wilson Ciputra"
           />
         </div>
-        <div id="side-text">
-          Wilson Ciputra is a 22 year old student studying at Babson College. He
-          is from Jakarta, Indonesia, and he enjoys traveling around the world
-          and visitng new places. Whenever he travels, he always seeks places
-          that are rich in nature and full of culinary experiences.
+        <div class="side-text">
+          <p>
+            Wilson Ciputra is a 22 year old student studying at Babson College.
+            He is from Jakarta, Indonesia, and he enjoys traveling around the
+            world and visitng new places. Whenever he travels, he always seeks
+            places that are rich in nature and full of culinary experiences.
+          </p>
+        </div>
+        <div class="side-text">
+          <a href="contact.html" class="item-link">Contact me</a>
         </div>
       </div>
     </div>

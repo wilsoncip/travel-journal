@@ -4,6 +4,10 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/490f2ad19e.js"
+      crossorigin="anonymous"
+    ></script>
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css?family=Raleway"
@@ -12,141 +16,163 @@
     <link rel="stylesheet" href="styles/navbar.css" />
     <link rel="stylesheet" href="styles/sitemap.css" />
     <title>Journal Entry: Japan</title>
-    <link rel="icon" type="image/png" href="images/favicon.png">
-    <style>
-      .title {
-        font-size: 40px;
-        font-weight: bold;
-        margin: 10px 20px;
-        margin-top: 20px;
-        margin-left: 10px;
-      }
-      div.title-img img {
-        width: 60px;
-        margin: 10px;
-        margin-top: 20px;
-        margin-left: 40px;
-        margin-right: 0;
-        box-shadow: 2px 2px darkgray;
-        border: 1px solid darkgray;
-      }
-
-      .body-1 {
-        display: grid;
-        background-color: rgb(246, 245, 244);
-        margin: 20px 40px;
-        margin-top: 10px;
-        padding: 30px;
-        font-size: 11px;
-      }
-
-      .entry-heading {
-        font-size: 16px;
-        margin-bottom: -20px;
-      }
-
-      .entry-body {
-        margin: 30px 0;
-      }
-
-      .body-1 img {
-        height: 120px;
-        float: left;
-        margin-right: 10px;
-      }
-    </style>
+    <link rel="icon" type="image/png" href="images/favicon.png" />
   </head>
   <body>
     <div class="container">
       <div class="header">
+        <div class="nav-items"><a class="nav-links" href="#">Home</a></div>
         <div class="nav-items">
-          <a class="nav-links" href="index.html">Home</a>
+          <a class="nav-links" href="profiles">Country Profiles</a>
         </div>
         <div class="nav-items">
-          <a class="nav-links" href="japan.html">Japan</a>
-        </div>
-        <div class="nav-items">
-          <a class="nav-links" href="iceland.html">Iceland</a>
-        </div>
-        <div class="nav-items">
-          <a class="nav-links" href="canada.html">Canada</a>
+          <div class="dropbutton">
+            <span class="pads nav-links">Journal Entries</span>
+            <div class="dropdown">
+              <a class="nav-items nav-links dropitems" href="japan.html"
+                >Japan</a
+              >
+              <a class="nav-items nav-links dropitems" href="iceland.html"
+                >Iceland</a
+              >
+              <a class="nav-items nav-links dropitems" href="canada.html"
+                >Canada</a
+              >
+            </div>
+          </div>
         </div>
         <div class="nav-items">
           <a class="nav-links" href="contact.html">Contact</a>
         </div>
       </div>
+
       <div class="title-img">
         <img src="images/japan.png" alt="japan flag" title="Flag of Japan" />
       </div>
-      <div class="title">Japan, the Land of the Rising Sun</div>
-      <div class="body-1">
-        <div class="entry-heading">Entry #1: Higashiyama, Kyoto</div>
-        <div class="entry-body">
-          <img
-            src="images/kyoto_city.jpg"
-            alt="kyoto"
-            title="Streets of Higashiyama"
-          />
-          Among all the different cities in Japan, Kyoto has to be one of the
-          prettiest. Among many of its cultural heritages, Kyoto leaves a
-          completely different feel when compared to the capital. The area I
-          found myself most mesmerized by is the Higashiyama district, also
-          known as old Kyoto. Many of the buildings here have been standing for
-          decades, and still, preserve the atmosphere of the feudal era. Walking
-          through the small alleyways, I found myself seeing a lot of people
-          wearing yukatas (the traditional Japanese attire worn in summer). I
-          was also wearing my yukata, which can be found commonly in rental
-          areas around Kyoto. Some many traditional shops and restaurants made
-          it feel very cozy yet ironically still very lively. I went from shop
-          to shop buying a multitude of traditional Japanese snacks like taiyaki
-          and bean-based treats while also grabbing a few souvenirs along the
-          way. It just takes you several years in the past, an experience rarely
-          felt in our 21st century.
+      <div class="title">
+        <h1 class="">Japan, the Land of the Rising Sun</h1>
+      </div>
+
+      <div class="body-main">
+        <div class="body-image">
+          <div class="switch" id="switch1">
+            <i class="fa-solid fa-arrow-left fa-3x"></i>
+          </div>
+          <div class="img-container">
+            <img src="images/kyoto_city.jpg" alt="kyoto_city" id="main-frame" />
+          </div>
+          <div class="switch" id="switch2">
+            <i class="fa-solid fa-arrow-right fa-3x"></i>
+          </div>
         </div>
-        <div class="entry-heading">Entry #2: Akihabara, Tokyo City</div>
-        <div class="entry-body">
-          <img
-            src="images/akihabara.jpg"
-            alt="akihabara"
-            title="Akihabara District"
-          />
-          Tokyo is a huge city, and there are many districts each with its
-          personality. Among famous places like the bustling Shibuya crossing or
-          the nightlife of the Shinjuku area, I found Akihabara to be the most
-          memorable place for me. This part of Tokyo is always bustling with
-          life, similar to what Times square feels like in New York City, but
-          with Japanese qualities. This area, known for its Otaku and pop
-          culture, contains many stores and entertainment from much different
-          anime and manga. As an anime enjoyer, this place was highly enjoyable
-          for me, as I brush past shops selling figurines and merchandise.
-          Furthermore, there were many arcades through the streets, which had
-          plenty of claw machines that I could never win. Luckily for me, I did
-          win a prize right before I ended my day here in Akihabara.
-        </div>
-        <div class="entry-heading">Entry #3: Dotonburi, Osaka</div>
-        <div class="entry-body">
-          <img
-            src="images/dotonburi.jpg"
-            alt="dotonburi"
-            title="Dotonburi District"
-          />
-          I'd say you have not been to Osaka if you didn't go through Dotonburi
-          Area. This district is called the heart of Osaka and is an experience
-          you should never miss. The streets are littered with a huge variety of
-          restaurants and the buildings are covered in beautiful neon lights
-          along with the famous Glico Man. My day spent in Dotonbori left me so
-          full that walking home felt like a chore. The bottom line, the food
-          here is delicious. It is the best place to try different kinds of
-          Japanese food, and also stores that allow you to bring home Japanese
-          snacks for yourself. My favorite food to eat here was takoyaki, as the
-          cold winter made the hot squid ball taste even better. Though I burnt
-          my tongue right after eating my first bite, left me with sore taste
-          buds for the rest of my time in Dotonbori
+
+        <div class="body-text">
+          <h2>Streets of Higashiyama, Kyoto</h2>
+          <p>
+            Among all the different cities in Japan, Kyoto has to be one of the
+            prettiest. Among many of its cultural heritages, Kyoto leaves a
+            completely different feel when compared to the capital. The area I
+            found myself most mesmerized by is the Higashiyama district, also
+            known as old Kyoto. Many of the buildings here have been standing
+            for decades, and still, preserve the atmosphere of the feudal era.
+            Walking through the small alleyways, I found myself seeing a lot of
+            people wearing yukatas (the traditional Japanese attire worn in
+            summer). I was also wearing my yukata, which can be found commonly
+            in rental areas around Kyoto. Some many traditional shops and
+            restaurants made it feel very cozy yet ironically still very lively.
+            I went from shop to shop buying a multitude of traditional Japanese
+            snacks like taiyaki and bean-based treats while also grabbing a few
+            souvenirs along the way. It just takes you several years in the
+            past, an experience rarely felt in our 21st century.
+          </p>
         </div>
       </div>
     </div>
+
     <div id="sitemap-container">
       <a href="sitemap.html" id="sitemap">Sitemap</a>
     </div>
+
+    <script>
+      const imageArray = ["kyoto_city", "akihabara", "dotonburi"];
+      const titleArray = [
+        "Streets of Higashiyama, Kyoto",
+        "Akihabara District, Tokyo",
+        "Dotonburi District, Osaka",
+      ];
+      const textArray = [
+        `Among all the different cities in Japan, Kyoto has to be one of the
+        prettiest. Among many of its cultural heritages, Kyoto leaves a
+        completely different feel when compared to the capital. The area I
+        found myself most mesmerized by is the Higashiyama district, also
+        known as old Kyoto. Many of the buildings here have been standing for
+        decades, and still, preserve the atmosphere of the feudal era. Walking
+        through the small alleyways, I found myself seeing a lot of people
+        wearing yukatas (the traditional Japanese attire worn in summer). I
+        was also wearing my yukata, which can be found commonly in rental
+        areas around Kyoto. Some many traditional shops and restaurants made
+        it feel very cozy yet ironically still very lively. I went from shop
+        to shop buying a multitude of traditional Japanese snacks like taiyaki
+        and bean-based treats while also grabbing a few souvenirs along the
+        way. It just takes you several years in the past, an experience rarely
+        felt in our 21st century.`,
+        `Tokyo is a huge city, and there are many districts each with its
+        personality. Among famous places like the bustling Shibuya crossing or
+        the nightlife of the Shinjuku area, I found Akihabara to be the most
+        memorable place for me. This part of Tokyo is always bustling with
+        life, similar to what Times square feels like in New York City, but
+        with Japanese qualities. This area, known for its Otaku and pop
+        culture, contains many stores and entertainment from much different
+        anime and manga. As an anime enjoyer, this place was highly enjoyable
+        for me, as I brush past shops selling figurines and merchandise.
+        Furthermore, there were many arcades through the streets, which had
+        plenty of claw machines that I could never win. Luckily for me, I did
+        win a prize right before I ended my day here in Akihabara.`,
+        `I'd say you have not been to Osaka if you didn't go through Dotonburi
+        Area. This district is called the heart of Osaka and is an experience
+        you should never miss. The streets are littered with a huge variety of
+        restaurants and the buildings are covered in beautiful neon lights
+        along with the famous Glico Man. My day spent in Dotonbori left me so
+        full that walking home felt like a chore. The bottom line, the food
+        here is delicious. It is the best place to try different kinds of
+        Japanese food, and also stores that allow you to bring home Japanese
+        snacks for yourself. My favorite food to eat here was takoyaki, as the
+        cold winter made the hot squid ball taste even better. Though I burnt
+        my tongue right after eating my first bite, left me with sore taste
+        buds for the rest of my time in Dotonbori.`,
+      ];
+      const imgEl = document.getElementById("main-frame");
+      const textEl = document.querySelector("p");
+      const titleEl = document.querySelector("h2");
+      let index = 0;
+
+      function changeLeft() {
+        if (index > 0) {
+          index -= 1;
+          imgEl.src = "images/" + imageArray[index] + ".jpg";
+          imgEl.alt = imageArray[index];
+          titleEl.innerHTML = titleArray[index];
+          textEl.innerHTML = textArray[index];
+        }
+      }
+
+      function changeRight() {
+        if (index < imageArray.length - 1) {
+          index += 1;
+          imgEl.src = "images/" + imageArray[index] + ".jpg";
+          imgEl.alt = imageArray[index];
+          titleEl.innerHTML = titleArray[index];
+          textEl.innerHTML = textArray[index];
+        }
+      }
+
+      document.getElementById("switch1").onclick = function () {
+        changeLeft();
+      };
+
+      document.getElementById("switch2").onclick = function () {
+        changeRight();
+      };
+    </script>
   </body>
 </html>
