@@ -15,75 +15,78 @@
     <link rel="stylesheet" href="styles/layout-journalpage.css" />
     <link rel="stylesheet" href="styles/navbar.css" />
     <link rel="stylesheet" href="styles/sitemap.css" />
-    <title>Journal Entry: Canada</title>
     <link rel="icon" type="image/png" href="images/favicon.png" />
+    <title>Journal Entry: Canada</title>
   </head>
   <body>
-    <div class="container">
-      <div class="header">
-        <div class="nav-items"><a class="nav-links" href="#">Home</a></div>
-        <div class="nav-items">
-          <a class="nav-links" href="profiles">Country Profiles</a>
-        </div>
-        <div class="nav-items">
-          <div class="dropbutton">
-            <span class="pads nav-links">Journal Entries</span>
-            <div class="dropdown">
-              <a class="nav-items nav-links dropitems" href="japan.html"
-                >Japan</a
-              >
-              <a class="nav-items nav-links dropitems" href="iceland.html"
-                >Iceland</a
-              >
-              <a class="nav-items nav-links dropitems" href="canada.html"
-                >Canada</a
-              >
-            </div>
+    <div class="header">
+      <div class="nav-items">
+        <a class="nav-links" href="index.html">Home</a>
+      </div>
+      <div class="nav-items">
+        <a class="nav-links" href="profiles">Country Profiles</a>
+      </div>
+      <div class="nav-items margin-auto">
+        <div class="dropbutton">
+          <span class="pads nav-links">Journal Entries</span>
+          <div class="dropdown">
+            <a class="nav-items nav-links dropitems" href="japan.html">Japan</a>
+            <a class="nav-items nav-links dropitems" href="iceland.html"
+              >Iceland</a
+            >
+            <a class="nav-items nav-links dropitems" href="canada.html"
+              >Canada</a
+            >
           </div>
         </div>
-        <div class="nav-items">
-          <a class="nav-links" href="contact.html">Contact</a>
-        </div>
       </div>
+      <div class="nav-items">
+        <a class="nav-links" href="contact.html">Contact Me</a>
+      </div>
+    </div>
 
+    <div class="container">
       <div class="title-img">
-        <img src="images/japan.png" alt="japan flag" title="Flag of Japan" />
+        <img src="images/canada.png" alt="canada flag" title="Flag of Canada" />
       </div>
       <div class="title">
-        <h1 class="">Canada, the Land of the Free</h1>
+        <h1>Canada, the Land of the Free</h1>
       </div>
 
       <div class="body-main">
+        <div class="pages">
+          <h3 id="h3-first">1</h3>
+          <h3>2</h3>
+          <h3>3</h3>
+        </div>
+
         <div class="body-image">
-          <div class="switch" id="switch1">
-            <i class="fa-solid fa-arrow-left fa-3x"></i>
-          </div>
+          <i id="switch1" class="fa-solid fa-arrow-left fa-3x"></i>
           <div class="img-container">
-            <img src="images/kyoto_city.jpg" alt="kyoto_city" id="main-frame" />
+            <img
+              src="images/suspension_bridge.jpg"
+              alt="capilano"
+              id="main-frame"
+            />
           </div>
-          <div class="switch" id="switch2">
-            <i class="fa-solid fa-arrow-right fa-3x"></i>
-          </div>
+          <i id="switch2" class="fa-solid fa-arrow-right fa-3x"></i>
         </div>
 
         <div class="body-text">
-          <h2>Streets of Higashiyama, Kyoto</h2>
-          <p>
-            Among all the different cities in Japan, Kyoto has to be one of the
-            prettiest. Among many of its cultural heritages, Kyoto leaves a
-            completely different feel when compared to the capital. The area I
-            found myself most mesmerized by is the Higashiyama district, also
-            known as old Kyoto. Many of the buildings here have been standing
-            for decades, and still, preserve the atmosphere of the feudal era.
-            Walking through the small alleyways, I found myself seeing a lot of
-            people wearing yukatas (the traditional Japanese attire worn in
-            summer). I was also wearing my yukata, which can be found commonly
-            in rental areas around Kyoto. Some many traditional shops and
-            restaurants made it feel very cozy yet ironically still very lively.
-            I went from shop to shop buying a multitude of traditional Japanese
-            snacks like taiyaki and bean-based treats while also grabbing a few
-            souvenirs along the way. It just takes you several years in the
-            past, an experience rarely felt in our 21st century.
+          <h2 id="location">Capilano Suspension Bridge Park</h2>
+          <p id="description">
+            One place you can't miss here is the Capilano Suspension Bridge
+            Park. This place is close to the city of Vancouver and is one of the
+            many places that you should visit while you are in the British
+            Columbia province. It is one of the longest suspension bridges you
+            can find in the world. As someone who has the fear of falling,
+            walking down the bridge was truly a frightening experience. Although
+            the bridge looks very short and meager from a distance, that
+            impression is flipped completely upside down once you stand right in
+            the middle of this bridge. The strong winds carried through this
+            valley make the bridge sway so hard you'd feel like it could flip at
+            any time. It doesn't help that many people are walking down the
+            bridge making the sway even stronger. A once a lifetime experience.
           </p>
         </div>
       </div>
@@ -94,56 +97,47 @@
     </div>
 
     <script>
-      const imageArray = ["kyoto_city", "akihabara", "dotonburi"];
+      const imageArray = ["suspension_bridge", "canyon", "lake_louise"];
       const titleArray = [
-        "Streets of Higashiyama, Kyoto",
-        "Akihabara District, Tokyo",
-        "Dotonburi District, Osaka",
+        "Capilano Suspension Bridge Park",
+        "Lynn Canyon Park",
+        "Lake Louise",
       ];
       const textArray = [
-        `Among all the different cities in Japan, Kyoto has to be one of the
-        prettiest. Among many of its cultural heritages, Kyoto leaves a
-        completely different feel when compared to the capital. The area I
-        found myself most mesmerized by is the Higashiyama district, also
-        known as old Kyoto. Many of the buildings here have been standing for
-        decades, and still, preserve the atmosphere of the feudal era. Walking
-        through the small alleyways, I found myself seeing a lot of people
-        wearing yukatas (the traditional Japanese attire worn in summer). I
-        was also wearing my yukata, which can be found commonly in rental
-        areas around Kyoto. Some many traditional shops and restaurants made
-        it feel very cozy yet ironically still very lively. I went from shop
-        to shop buying a multitude of traditional Japanese snacks like taiyaki
-        and bean-based treats while also grabbing a few souvenirs along the
-        way. It just takes you several years in the past, an experience rarely
-        felt in our 21st century.`,
-        `Tokyo is a huge city, and there are many districts each with its
-        personality. Among famous places like the bustling Shibuya crossing or
-        the nightlife of the Shinjuku area, I found Akihabara to be the most
-        memorable place for me. This part of Tokyo is always bustling with
-        life, similar to what Times square feels like in New York City, but
-        with Japanese qualities. This area, known for its Otaku and pop
-        culture, contains many stores and entertainment from much different
-        anime and manga. As an anime enjoyer, this place was highly enjoyable
-        for me, as I brush past shops selling figurines and merchandise.
-        Furthermore, there were many arcades through the streets, which had
-        plenty of claw machines that I could never win. Luckily for me, I did
-        win a prize right before I ended my day here in Akihabara.`,
-        `I'd say you have not been to Osaka if you didn't go through Dotonburi
-        Area. This district is called the heart of Osaka and is an experience
-        you should never miss. The streets are littered with a huge variety of
-        restaurants and the buildings are covered in beautiful neon lights
-        along with the famous Glico Man. My day spent in Dotonbori left me so
-        full that walking home felt like a chore. The bottom line, the food
-        here is delicious. It is the best place to try different kinds of
-        Japanese food, and also stores that allow you to bring home Japanese
-        snacks for yourself. My favorite food to eat here was takoyaki, as the
-        cold winter made the hot squid ball taste even better. Though I burnt
-        my tongue right after eating my first bite, left me with sore taste
-        buds for the rest of my time in Dotonbori.`,
+        `One place you can't miss here is the Capilano Suspension Bridge Park.
+        This place is close to the city of Vancouver and is one of the many
+        places that you should visit while you are in the British Columbia
+        province. It is one of the longest suspension bridges you can find in
+        the world. As someone who has the fear of falling, walking down the
+        bridge was truly a frightening experience. Although the bridge looks
+        very short and meager from a distance, that impression is flipped
+        completely upside down once you stand right in the middle of this
+        bridge. The strong winds carried through this valley make the bridge
+        sway so hard you'd feel like it could flip at any time. It doesn't
+        help that many people are walking down the bridge making the sway even
+        stronger. A once a lifetime experience.`,
+        `If you are looking to trek/hike, Lynn Canyon Park would be my
+        suggestion. It is a very long trail that goes through a dense forest
+        that gives you many different views just in one journey. The trail
+        runs along the canyon, so you can never miss the river that flows
+        through the entire forest. If you want to feel connected with nature
+        away from bustling city life, this is the palace you want to be in.
+        Just be careful of the bears though.`,
+        `Finally, near the town of Banff is the renowned Lake Lousie, with one
+        of the most breathtaking views in Canada. Next to the lake is the
+        Fairmont Chateau Lake Louise Hotel, where travelers including me can
+        reside to enjoy this view. Along the lake is a trail where you get to
+        enjoy this huge lake in all its glory. If you walk down the lakeside
+        trail, you will find that it continues into the forest, which in its
+        own right was also very beautiful. I was told that if you come during
+        winter, the entire lake would be frozen, and many people can ice skate
+        here if you do enjoy that kind of sport. A palace that you should miss
+        if you are in the British Columbia.`,
       ];
+      const pageArray = document.querySelectorAll("h3");
       const imgEl = document.getElementById("main-frame");
-      const textEl = document.querySelector("p");
-      const titleEl = document.querySelector("h2");
+      const textEl = document.getElementById("description");
+      const titleEl = document.getElementById("location");
       let index = 0;
 
       function changeLeft() {
@@ -153,6 +147,10 @@
           imgEl.alt = imageArray[index];
           titleEl.innerHTML = titleArray[index];
           textEl.innerHTML = textArray[index];
+          pageArray[index + 1].style.fontWeight = "lighter";
+          pageArray[index + 1].style.fontSize = "1em";
+          pageArray[index].style.fontWeight = "bold";
+          pageArray[index].style.fontSize = "2em";
         }
       }
 
@@ -163,6 +161,10 @@
           imgEl.alt = imageArray[index];
           titleEl.innerHTML = titleArray[index];
           textEl.innerHTML = textArray[index];
+          pageArray[index - 1].style.fontWeight = "lighter";
+          pageArray[index - 1].style.fontSize = "1em";
+          pageArray[index].style.fontWeight = "bold";
+          pageArray[index].style.fontSize = "2em";
         }
       }
 

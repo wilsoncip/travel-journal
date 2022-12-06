@@ -26,6 +26,7 @@
         font-size: 70px;
         font-weight: bold;
         color: rgba(32, 32, 32, 0.873);
+        white-space: nowrap;
       }
 
       .headline-btn {
@@ -72,6 +73,9 @@
       .item-link {
         font-size: 16px;
         color: black;
+        background-color: rgb(223, 222, 222);
+        padding: 5px 10px;
+        border-radius: 100px;
       }
 
       /* side styles */
@@ -97,33 +101,36 @@
     </style>
   </head>
   <body>
-    <div class="container">
-      <div class="header">
-        <div class="nav-items"><a class="nav-links" href="#">Home</a></div>
-        <div class="nav-items">
-          <a class="nav-links" href="profiles">Country Profiles</a>
-        </div>
-        <div class="nav-items">
-          <div class="dropbutton">
-            <span class="pads nav-links">Journal Entries</span>
-            <div class="dropdown">
-              <a class="nav-items nav-links dropitems" href="japan.html"
-                >Japan</a
-              >
-              <a class="nav-items nav-links dropitems" href="iceland.html"
-                >Iceland</a
-              >
-              <a class="nav-items nav-links dropitems" href="canada.html"
-                >Canada</a
-              >
-            </div>
+    <div class="header">
+      <div class="nav-items">
+        <a class="nav-links" href="index.html">Home</a>
+      </div>
+      <div class="nav-items">
+        <a class="nav-links" href="profiles">Country Profiles</a>
+      </div>
+      <div class="nav-items margin-auto">
+        <div class="dropbutton">
+          <span class="pads nav-links">Journal Entries</span>
+          <div class="dropdown">
+            <a class="nav-items nav-links dropitems" href="japan.html"
+              >Japan</a
+            >
+            <a class="nav-items nav-links dropitems" href="iceland.html"
+              >Iceland</a
+            >
+            <a class="nav-items nav-links dropitems" href="canada.html"
+              >Canada</a
+            >
           </div>
         </div>
-        <div class="nav-items">
-          <a class="nav-links" href="contact.html">Contact</a>
-        </div>
       </div>
+      <div class="nav-items">
+        <a class="nav-links" href="contact.html">Contact Me</a>
+      </div>
+    </div>
 
+    
+    <div class="container">
       <div class="body-1">
         <div class="headline">Wilson's Travel Journal</div>
         <button class="headline-btn">

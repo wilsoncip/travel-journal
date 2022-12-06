@@ -10,15 +10,10 @@ body {
   display: grid;
   grid-template-columns: 1fr 8fr;
   grid-template-areas:
-    "header header"
     "title-img title"
-    "body-1 body-1"
-    "sitemap sitemap";
+    "body-1 body-1";
 }
 
-.header {
-  grid-area: header;
-}
 .title-img {
   grid-area: title-img;
 }
@@ -41,6 +36,8 @@ h1 {
   margin: 0;
 }
 
+
+
 .title {
   margin: 10px 20px;
   margin-top: 20px;
@@ -56,6 +53,22 @@ div.title-img img {
   /* border: 1px solid darkgray; */
 }
 
+/* Pages */
+.pages{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#h3-first{
+  font-weight: bold;
+  font-size: 2em;
+}
+
+h3{
+  margin: 20px 20px 0;
+  font-weight: lighter;
+}
 /* Main body CSS */
 
 .body-main {
@@ -99,7 +112,7 @@ i {
   flex-shrink: 0; */
 }
 
-.switch:hover {
+i:hover {
   cursor: pointer;
 }
 

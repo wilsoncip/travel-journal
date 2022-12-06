@@ -9,13 +9,8 @@ body {
     display: grid;
     grid-template-columns: 5fr 2fr;
     grid-template-areas:
-      "header header"
       "body-1 body-1"
       "body-2 side";
-  }
-
-  .header {
-    grid-area: header;
   }
 
   .body-1 {

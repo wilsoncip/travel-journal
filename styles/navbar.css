@@ -3,6 +3,7 @@
     font-size: 24px;
     padding: 13px 10px;
     color: white;
+    white-space: nowrap;
   }
 
   .nav-items:hover {
@@ -15,6 +16,10 @@
     color: white;
   }
 
+  .margin-auto{
+    margin-right: auto;
+  }
+
   .header {
     display: flex;
     background-color: darkslategrey;
@@ -25,7 +30,7 @@
   .dropbutton{
     position: relative;
     display: inline-block;
-    padding-bottom: 10px;
+    padding-bottom: 15px;
   }
   .dropdown{
     display: none;

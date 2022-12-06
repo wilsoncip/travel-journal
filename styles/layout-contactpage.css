@@ -9,15 +9,10 @@ body {
   display: grid;
   grid-template-columns: 2fr 7fr;
   grid-template-areas:
-    "header header"
     "body-1 body-1"
     "body-2 body-3"
     "body-2 body-4"
     "form form";
-}
-
-.header {
-  grid-area: header;
 }
 
 .body-1 {

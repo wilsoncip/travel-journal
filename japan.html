@@ -19,33 +19,33 @@
     <link rel="icon" type="image/png" href="images/favicon.png" />
   </head>
   <body>
-    <div class="container">
-      <div class="header">
-        <div class="nav-items"><a class="nav-links" href="#">Home</a></div>
-        <div class="nav-items">
-          <a class="nav-links" href="profiles">Country Profiles</a>
-        </div>
-        <div class="nav-items">
-          <div class="dropbutton">
-            <span class="pads nav-links">Journal Entries</span>
-            <div class="dropdown">
-              <a class="nav-items nav-links dropitems" href="japan.html"
-                >Japan</a
-              >
-              <a class="nav-items nav-links dropitems" href="iceland.html"
-                >Iceland</a
-              >
-              <a class="nav-items nav-links dropitems" href="canada.html"
-                >Canada</a
-              >
-            </div>
+    <div class="header">
+      <div class="nav-items">
+        <a class="nav-links" href="index.html">Home</a>
+      </div>
+      <div class="nav-items">
+        <a class="nav-links" href="profiles">Country Profiles</a>
+      </div>
+      <div class="nav-items margin-auto">
+        <div class="dropbutton">
+          <span class="pads nav-links">Journal Entries</span>
+          <div class="dropdown">
+            <a class="nav-items nav-links dropitems" href="japan.html">Japan</a>
+            <a class="nav-items nav-links dropitems" href="iceland.html"
+              >Iceland</a
+            >
+            <a class="nav-items nav-links dropitems" href="canada.html"
+              >Canada</a
+            >
           </div>
         </div>
-        <div class="nav-items">
-          <a class="nav-links" href="contact.html">Contact</a>
-        </div>
       </div>
+      <div class="nav-items">
+        <a class="nav-links" href="contact.html">Contact Me</a>
+      </div>
+    </div>
 
+    <div class="container">
       <div class="title-img">
         <img src="images/japan.png" alt="japan flag" title="Flag of Japan" />
       </div>
@@ -54,21 +54,23 @@
       </div>
 
       <div class="body-main">
+        <div class="pages">
+          <h3 id="h3-first">1</h3>
+          <h3>2</h3>
+          <h3>3</h3>
+        </div>
+
         <div class="body-image">
-          <div class="switch" id="switch1">
-            <i class="fa-solid fa-arrow-left fa-3x"></i>
-          </div>
+          <i id="switch1" class="fa-solid fa-arrow-left fa-3x"></i>
           <div class="img-container">
             <img src="images/kyoto_city.jpg" alt="kyoto_city" id="main-frame" />
           </div>
-          <div class="switch" id="switch2">
-            <i class="fa-solid fa-arrow-right fa-3x"></i>
-          </div>
+          <i id="switch2" class="fa-solid fa-arrow-right fa-3x"></i>
         </div>
 
         <div class="body-text">
-          <h2>Streets of Higashiyama, Kyoto</h2>
-          <p>
+          <h2 id="location">Streets of Higashiyama, Kyoto</h2>
+          <p id="description">
             Among all the different cities in Japan, Kyoto has to be one of the
             prettiest. Among many of its cultural heritages, Kyoto leaves a
             completely different feel when compared to the capital. The area I
@@ -141,9 +143,10 @@
         my tongue right after eating my first bite, left me with sore taste
         buds for the rest of my time in Dotonbori.`,
       ];
+      const pageArray = document.querySelectorAll("h3");
       const imgEl = document.getElementById("main-frame");
-      const textEl = document.querySelector("p");
-      const titleEl = document.querySelector("h2");
+      const textEl = document.getElementById("description");
+      const titleEl = document.getElementById("location");
       let index = 0;
 
       function changeLeft() {
@@ -153,6 +156,10 @@
           imgEl.alt = imageArray[index];
           titleEl.innerHTML = titleArray[index];
           textEl.innerHTML = textArray[index];
+          pageArray[index + 1].style.fontWeight = "lighter";
+          pageArray[index + 1].style.fontSize = "1em";
+          pageArray[index].style.fontWeight = "bold";
+          pageArray[index].style.fontSize = "2em";
         }
       }
 
@@ -163,6 +170,10 @@
           imgEl.alt = imageArray[index];
           titleEl.innerHTML = titleArray[index];
           textEl.innerHTML = textArray[index];
+          pageArray[index - 1].style.fontWeight = "lighter";
+          pageArray[index - 1].style.fontSize = "1em";
+          pageArray[index].style.fontWeight = "bold";
+          pageArray[index].style.fontSize = "2em";
         }
       }
 
