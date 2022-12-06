@@ -54,27 +54,28 @@
     padding: 5px 10px;
   }
 
+  .dropdown1 {
+    display: none;
+    position: absolute;
+    width: 160px;
+    background-color: darkslategray;
+    z-index: 1;
+    padding: 5px 10px;
+  }
+
   .dropdown2 {
     display: none;
     position: absolute;
     width: 160px;
     background-color: darkslategray;
     z-index: 1;
-    margin-top: -38px;
+    margin-top: -30px;
     margin-left: 160px;
     padding: 5px 10px;
   }
 
-  .dropbutton:hover .dropdown {
-    display: block;
-  }
-
-  .dropbutton2:hover .dropdown2 {
-    display: block;
-  }
-
   .dropitems {
-    display: inline-block;
+    display: block;
   }
 
 }
