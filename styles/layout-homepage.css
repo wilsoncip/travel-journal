@@ -6,8 +6,7 @@
     font-size: 14px;
   }
 
-  body .container {
-    width: 390px;
+  .container {
     display: grid;
     grid-template-areas:
       "body-1"
@@ -29,7 +28,6 @@
   .body-1 {
     display: grid;
     height: 400px;
-    width: 100%;
     justify-content: center;
     align-items: center;
   }

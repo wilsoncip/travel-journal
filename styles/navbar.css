@@ -1,8 +1,27 @@
 @media (max-width: 1000px) {
+  .header {
+    display: none;
+    background-color: darkslategrey;
+    height: 53px;
+    min-width: 100%;
+  }
+
+  .mobile {
+    display: flex;
+    background-color: darkslategrey;
+    height: 53px;
+    min-width: 100%;
+  }
+
+  i{
+    color: white;
+    margin: 4px 10px;
+  }
+
   .nav-items {
     margin: 0;
     font-size: 18px;
-    padding: 13px 10px;
+    margin: 10px;
     color: white;
     /* white-space: nowrap; */
   }
@@ -21,13 +40,6 @@
     margin-right: auto;
   }
 
-  .header {
-    display: flex;
-    background-color: darkslategrey;
-    width: 100%;
-    height: 53px;
-  }
-
   .dropbutton {
     position: relative;
     display: inline-block;
@@ -36,22 +48,41 @@
   .dropdown {
     display: none;
     position: absolute;
-    width: 113%;
+    width: 160px;
     background-color: darkslategray;
     z-index: 1;
-    margin: 11px 0 0 -10px;
+    padding: 5px 10px;
   }
 
-  .dropitems {
-    display: block;
+  .dropdown2 {
+    display: none;
+    position: absolute;
+    width: 160px;
+    background-color: darkslategray;
+    z-index: 1;
+    margin-top: -38px;
+    margin-left: 160px;
+    padding: 5px 10px;
   }
 
   .dropbutton:hover .dropdown {
     display: block;
   }
+
+  .dropbutton2:hover .dropdown2 {
+    display: block;
+  }
+
+  .dropitems {
+    display: inline-block;
+  }
+
 }
 
 @media (min-width: 1000px) {
+  .mobile{
+    display: none;
+  }
   .nav-items {
     margin: 0;
     font-size: 24px;

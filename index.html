@@ -4,6 +4,10 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/490f2ad19e.js"
+      crossorigin="anonymous"
+    ></script>
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css?family=Raleway"
@@ -11,10 +15,32 @@
     <link rel="stylesheet" href="styles/layout-homepage.css" />
     <link rel="stylesheet" href="styles/navbar.css" />
     <link rel="stylesheet" href="styles/sitemap.css" />
+    <script src="script/navbarClick.js"></script>
     <link rel="icon" type="image/png" href="images/favicon.png" />
     <title>Wilson's Travel Journal</title>
   </head>
   <body>
+    <!-- Nav Bar for Mobile -->
+    <div class="mobile">
+      <div class="dropbutton">
+        <span class="pads"><i id="hamburg" class="fa-solid fa-bars fa-3x"></i></span>
+        <div class="dropdown">
+          <a class="nav-items nav-links dropitems" href="japan.html">Home</a>
+          <div class="dropbutton2 nav-items nav-links dropitems">
+            <span class="pads">Country Profiles</span>
+            <div class="dropdown2">
+              <a class="nav-items nav-links dropitems" href="japan.html">Home</a>
+              <a class="nav-items nav-links dropitems" href="iceland.html">Country Profiles</a>
+              <a class="nav-items nav-links dropitems" href="canada.html">Journal Entries</a>
+              <a class="nav-items nav-links dropitems" href="canada.html">Contact</a>
+            </div>
+          </div>
+          <a class="nav-items nav-links dropitems" href="canada.html">Contact</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Nav Bar for Desktop -->
     <div class="header">
       <div class="nav-items">
         <a class="nav-links" href="index.html">Home</a>
