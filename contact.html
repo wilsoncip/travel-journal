@@ -100,6 +100,39 @@
     </style>
   </head>
   <body>
+    <!-- Nav Bar for Mobile -->
+    <div class="mobile">
+      <div>
+        <span class="pads"
+          ><i id="drop1" class="fa-solid fa-bars fa-3x"></i
+        ></span>
+        <div class="dropdown1">
+          <a class="nav-items nav-links dropitems" href="index.html">Home</a>
+          <a class="nav-items nav-links dropitems" href="country_profiles.html"
+            >Country Profiles</a
+          >
+          <div class="nav-items nav-links dropitems">
+            <span id="drop2" class="pads">Journal Entries</span>
+            <div class="dropdown2">
+              <a class="nav-items nav-links dropitems" href="japan.html"
+                >Japan</a
+              >
+              <a class="nav-items nav-links dropitems" href="iceland.html"
+                >Iceland</a
+              >
+              <a class="nav-items nav-links dropitems" href="canada.html"
+                >Canada</a
+              >
+            </div>
+          </div>
+          <a class="nav-items nav-links dropitems" href="contact.html"
+            >Contact</a
+          >
+        </div>
+      </div>
+    </div>
+
+    <!-- Nav Bar for Desktop -->
     <div class="header">
       <div class="nav-items">
         <a class="nav-links" href="index.html">Home</a>
@@ -202,6 +235,39 @@
     </div>
 
     <script>
+            // navbar clicking
+            let clicked = 0
+      function expand1() {
+        if (clicked == 0){
+          clicked +=1
+          document.querySelector(".dropdown1").style.display = "block"
+        }else{
+          clicked = 0
+          document.querySelector(".dropdown1").style.display = "none"
+        };
+      }
+
+      let clicked2 = 0
+      function expand2() {
+        if (clicked2 == 0){
+          clicked2 +=1
+          document.querySelector(".dropdown2").style.display = "block"
+        }else{
+          clicked2 = 0
+          document.querySelector(".dropdown2").style.display = "none"
+        }
+        ;
+      }
+
+      document.getElementById("drop1").addEventListener("click", function () {
+        expand1();
+      });
+      document.getElementById("drop2").addEventListener("click", function () {
+        expand2();
+      });
+
+
+
       function validate() {
         console.log("test");
         x = document.querySelector("input[name=name]")
