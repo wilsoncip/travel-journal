@@ -110,6 +110,7 @@
         <h1>Japan</h1>
         <p>Capital: Tokyo</p>
         <p>Population: 125,816,000 (2022)</p>
+        <p>Total Area: 377,976 Sq. Km.</p>
         <p>Currency: Japanese Yen (¥)</p>
         <a href="https://www.britannica.com/facts/Japan">Source: Britannica</a>
 
@@ -127,7 +128,7 @@
         <h1>Iceland</h1>
         <p>Capital: Reykjavík</p>
         <p>Population: 380,500 (2022)</p>
-        <p>Total Area: 9,984,670 Sq. Km.</p>
+        <p>Total Area: 103,000 Sq. Km.</p>
         <p>Currency: Icelandic Króna (kr)</p>
         <a href="https://www.britannica.com/facts/Iceland">Source: Britannica</a>
         <div class="conversion">
@@ -144,6 +145,7 @@
         <h1>Canada</h1>
         <p>Capital: Ottawa</p>
         <p>Population: 37,424,000 (2022)</p>
+        <p>Total Area: 9,984,670 Sq. Km.</p>
         <p>Currency: Canadian dollar ($)</p>
         <a href="https://www.britannica.com/facts/Canada">Source: Britannica</a>
         <div class="conversion">
@@ -159,8 +161,9 @@
     <script>
       let response;
       const inputArray = document.querySelectorAll("input");
-
+        
       document.addEventListener("DOMContentLoaded", function () {
+        // https://exchangerate.host/#/#docs
         const URL =
           "https://api.exchangerate.host/latest?&base=USD&symbols=JPY,ISK,CAD";
         const request = new XMLHttpRequest();

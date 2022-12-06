@@ -52,43 +52,48 @@
       <div class="title">
         <h1>Canada, the Land of the Free</h1>
       </div>
+    </div>
 
-      <div class="body-main">
-        <div class="pages">
-          <h3 id="h3-first">1</h3>
-          <h3>2</h3>
-          <h3>3</h3>
-        </div>
+    <div class="body-main">
+      <div class="pages">
+        <h3 id="h3-first">1</h3>
+        <h3>2</h3>
+        <h3>3</h3>
+      </div>
 
-        <div class="body-image">
-          <i id="switch1" class="fa-solid fa-arrow-left fa-3x"></i>
-          <div class="img-container">
-            <img
-              src="images/suspension_bridge.jpg"
-              alt="capilano"
-              id="main-frame"
-            />
-          </div>
-          <i id="switch2" class="fa-solid fa-arrow-right fa-3x"></i>
+      <div class="body-image">
+        <i id="switch1" class="fa-solid fa-arrow-left fa-3x"></i>
+        <div class="img-container">
+          <img
+            src="images/suspension_bridge.jpg"
+            alt="capilano"
+            id="main-frame"
+          />
         </div>
+        <i id="switch2" class="fa-solid fa-arrow-right fa-3x"></i>
+      </div>
 
-        <div class="body-text">
-          <h2 id="location">Capilano Suspension Bridge Park</h2>
-          <p id="description">
-            One place you can't miss here is the Capilano Suspension Bridge
-            Park. This place is close to the city of Vancouver and is one of the
-            many places that you should visit while you are in the British
-            Columbia province. It is one of the longest suspension bridges you
-            can find in the world. As someone who has the fear of falling,
-            walking down the bridge was truly a frightening experience. Although
-            the bridge looks very short and meager from a distance, that
-            impression is flipped completely upside down once you stand right in
-            the middle of this bridge. The strong winds carried through this
-            valley make the bridge sway so hard you'd feel like it could flip at
-            any time. It doesn't help that many people are walking down the
-            bridge making the sway even stronger. A once a lifetime experience.
-          </p>
-        </div>
+      <div class="body-text">
+        <h2>
+          <a id="location" href="https://goo.gl/maps/ieuehUq6MmbnuBpJ8"
+            ><i class="fa-sharp fa-solid fa-location-dot"></i> Capilano
+            Suspension Bridge Park</a
+          >
+        </h2>
+        <p id="description">
+          One place you can't miss here is the Capilano Suspension Bridge Park.
+          This place is close to the city of Vancouver and is one of the many
+          places that you should visit while you are in the British Columbia
+          province. It is one of the longest suspension bridges you can find in
+          the world. As someone who has the fear of falling, walking down the
+          bridge was truly a frightening experience. Although the bridge looks
+          very short and meager from a distance, that impression is flipped
+          completely upside down once you stand right in the middle of this
+          bridge. The strong winds carried through this valley make the bridge
+          sway so hard you'd feel like it could flip at any time. It doesn't
+          help that many people are walking down the bridge making the sway even
+          stronger. A once a lifetime experience.
+        </p>
       </div>
     </div>
 
@@ -135,6 +140,11 @@
         if you are in the British Columbia.`,
       ];
       const pageArray = document.querySelectorAll("h3");
+      const gmapArray = [
+        "https://goo.gl/maps/ieuehUq6MmbnuBpJ8",
+        "https://goo.gl/maps/Nv78DkmUd3rwdXbi7",
+        "https://goo.gl/maps/HUJTNb1Pu3o9b46c8",
+      ];
       const imgEl = document.getElementById("main-frame");
       const textEl = document.getElementById("description");
       const titleEl = document.getElementById("location");
@@ -145,7 +155,10 @@
           index -= 1;
           imgEl.src = "images/" + imageArray[index] + ".jpg";
           imgEl.alt = imageArray[index];
-          titleEl.innerHTML = titleArray[index];
+          titleEl.innerHTML =
+            "<i class='fa-sharp fa-solid fa-location-dot'></i> " +
+            titleArray[index];
+          titleEl.href = gmapArray[index]
           textEl.innerHTML = textArray[index];
           pageArray[index + 1].style.fontWeight = "lighter";
           pageArray[index + 1].style.fontSize = "1em";
@@ -159,7 +172,10 @@
           index += 1;
           imgEl.src = "images/" + imageArray[index] + ".jpg";
           imgEl.alt = imageArray[index];
-          titleEl.innerHTML = titleArray[index];
+          titleEl.innerHTML =
+            "<i class='fa-sharp fa-solid fa-location-dot'></i> " +
+            titleArray[index];
+          titleEl.href = gmapArray[index]
           textEl.innerHTML = textArray[index];
           pageArray[index - 1].style.fontWeight = "lighter";
           pageArray[index - 1].style.fontSize = "1em";

@@ -7,22 +7,8 @@ body {
 }
 
 .container {
-  display: grid;
-  grid-template-columns: 3.5fr 10.5fr;
-  grid-template-areas:
-    "title-img title"
-    "body-1 body-1";
-}
-
-.title-img {
-  grid-area: title-img;
-  text-align: right;
-}
-.title {
-  grid-area: title;
-}
-.body-main {
-  grid-area: body-1;
+  display: flex;
+  justify-content: center;
 }
 
 #sitemap-container {
@@ -37,8 +23,6 @@ h1 {
   margin: 0;
 }
 
-
-
 .title {
   margin: 10px 20px;
   margin-top: 20px;
@@ -52,28 +36,33 @@ div.title-img img {
 }
 
 /* Pages */
-.pages{
+.pages {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-#h3-first{
+#h3-first {
   font-weight: bold;
   font-size: 2em;
 }
 
-h3{
+h3 {
   margin: 20px 20px 0;
   font-weight: lighter;
 }
 /* Main body CSS */
 
+h2 {
+  text-align: center;
+}
+
 .body-main {
   background-color: rgb(228, 228, 228);
   border-radius: 40px;
-  margin: 20px 200px;
-  margin-top: 10px;
+  margin: 0 auto;
+  width: 1100px;
+  min-width: 1100px;
 }
 
 .body-image {
@@ -83,7 +72,8 @@ h3{
 }
 
 .body-text {
-  margin: 0 200px 75px;
+  margin: 0 200px;
+  padding-bottom: 50px;
 }
 
 .img-container {
@@ -99,25 +89,20 @@ h3{
   border-radius: 40px;
 }
 
-i {
+.body-image i {
   color: rgb(141, 141, 141);
   background-color: lightgrey;
   border-radius: 100px;
   padding: 20px;
   margin: 0 20px;
-  /* flex-basis: 50px;
-  flex-grow: 0;
-  flex-shrink: 0; */
 }
 
-i:hover {
+.body-image i:hover {
   cursor: pointer;
-}
-
-i:hover {
   background-color: rgb(204, 204, 204);
 }
 
-h2 {
-  text-align: center;
+.body-text a {
+  text-decoration: none;
+  color: darkmagenta;
 }
