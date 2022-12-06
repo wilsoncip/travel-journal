@@ -22,7 +22,7 @@
     <title>Contact Page</title>
     <link rel="icon" type="image/png" href="images/favicon.png" />
     <style>
-      h1{
+      h1 {
         font-size: 40px;
         font-weight: bold;
         margin: 20px;
@@ -61,7 +61,7 @@
       form {
         background-color: white;
         padding: 20px;
-        width: 40%;
+        width: 600px;
         margin-top: 30px;
       }
       input {
@@ -105,7 +105,7 @@
         <a class="nav-links" href="index.html">Home</a>
       </div>
       <div class="nav-items">
-        <a class="nav-links" href="profiles">Country Profiles</a>
+        <a class="nav-links" href="country_profiles.html">Country Profiles</a>
       </div>
       <div class="nav-items margin-auto">
         <div class="dropbutton">
@@ -153,7 +153,8 @@
         ></a>
       </div>
       <div class="form">
-        <form action="" method="post">
+        <form action="" method="GET" onsubmit="validate()">
+          <!-- used GET method since POST method won't work with empty action-->
           <fieldset>
             <legend>Contact Me</legend>
             <div class="formtext">
@@ -201,12 +202,14 @@
     </div>
 
     <script>
-      function validate(){
-        console.log("test")
-      }
-
-      document.querySelector("button[name=submit]").onclick = function(){
-
+      function validate() {
+        console.log("test");
+        x = document.querySelector("input[name=name]")
+        y = document.querySelector("input[name=email]")
+        z = document.querySelector("textarea[name=comments]")
+        if (x.value == "" && y.value == "" && z.value == ""){
+          alert("You have missing values in your form.")
+        }
       }
     </script>
   </body>

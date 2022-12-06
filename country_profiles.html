@@ -4,19 +4,206 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Raleway"
+    />
+    <link rel="stylesheet" href="styles/layout-homepage.css" />
+    <link rel="stylesheet" href="styles/navbar.css" />
+    <link rel="stylesheet" href="styles/sitemap.css" />
+    <link rel="icon" type="image/png" href="images/favicon.png" />
     <title>Document</title>
+    <style>
+      .container {
+        margin-top: 30px;
+        display: flex;
+        column-gap: 50px;
+        justify-content: center;
+      }
+
+      .box {
+        margin-bottom: 50px;
+        background-color: rgba(247, 240, 240, 0.98);
+        width: 25%;
+        padding: 30px;
+        border-radius: 40px;
+      }
+
+      p {
+        text-align: left;
+        margin: 10px 60px;
+      }
+
+      .box a {
+        font-size: smaller;
+        text-align: unset;
+        margin: 10px 60px;
+      }
+
+      h1 {
+        text-align: center;
+      }
+
+      h2 {
+        margin-top: 30px;
+        font-size: larger;
+      }
+
+      .img-container {
+        display: flex;
+        justify-content: center;
+      }
+
+      img {
+        width: 70%;
+      }
+
+      .conversion {
+        text-align: center;
+      }
+      .conversion label {
+        margin: 10px;
+        font-size: 20;
+        display: block;
+      }
+
+      input {
+        height: 24px;
+        font-size: 18px;
+        width: 150px;
+      }
+    </style>
   </head>
   <body>
-    <script>
-      const URL = "https://api.exchangerate.host/convert?from=USD&to=EUR";
-      const request = new XMLHttpRequest();
-      request.open("GET", URL);
-      request.responseType = "json";
-      request.send();
+    <div class="header">
+      <div class="nav-items">
+        <a class="nav-links" href="index.html">Home</a>
+      </div>
+      <div class="nav-items">
+        <a class="nav-links" href="country_profiles.html">Country Profiles</a>
+      </div>
+      <div class="nav-items margin-auto">
+        <div class="dropbutton">
+          <span class="pads nav-links">Journal Entries</span>
+          <div class="dropdown">
+            <a class="nav-items nav-links dropitems" href="japan.html">Japan</a>
+            <a class="nav-items nav-links dropitems" href="iceland.html"
+              >Iceland</a
+            >
+            <a class="nav-items nav-links dropitems" href="canada.html"
+              >Canada</a
+            >
+          </div>
+        </div>
+      </div>
+      <div class="nav-items">
+        <a class="nav-links" href="contact.html">Contact Me</a>
+      </div>
+    </div>
 
-      request.onload = function () {
-        const response = request.response;
-      };
+    <h1>Countries I Have Been to</h1>
+    <div class="container">
+      <div class="box">
+        <div class="img-container">
+          <img src="images/japan.png" alt="japan" />
+        </div>
+        <h1>Japan</h1>
+        <p>Capital: Tokyo</p>
+        <p>Population: 125,816,000 (2022)</p>
+        <p>Currency: Japanese Yen (¥)</p>
+        <a href="https://www.britannica.com/facts/Japan">Source: Britannica</a>
+
+        <div class="conversion">
+          <h2>Currency Conversion</h2>
+          <label>USD: <input type="text" name="USDJPY" /></label>
+          <label>JPY: <input type="text" name="JPY" /></label>
+        </div>
+      </div>
+
+      <div class="box">
+        <div class="img-container">
+          <img src="images/iceland.png" alt="iceland" />
+        </div>
+        <h1>Iceland</h1>
+        <p>Capital: Reykjavík</p>
+        <p>Population: 380,500 (2022)</p>
+        <p>Total Area: 9,984,670 Sq. Km.</p>
+        <p>Currency: Icelandic Króna (kr)</p>
+        <a href="https://www.britannica.com/facts/Iceland">Source: Britannica</a>
+        <div class="conversion">
+          <h2>Currency Conversion</h2>
+          <label>USD: <input type="text" name="USDISK" /></label>
+          <label>ISK: <input type="text" name="ISK" /></label>
+        </div>
+      </div>
+
+      <div class="box">
+        <div class="img-container">
+          <img src="images/canada.png" alt="canada" />
+        </div>
+        <h1>Canada</h1>
+        <p>Capital: Ottawa</p>
+        <p>Population: 37,424,000 (2022)</p>
+        <p>Currency: Canadian dollar ($)</p>
+        <a href="https://www.britannica.com/facts/Canada">Source: Britannica</a>
+        <div class="conversion">
+          <h2>Currency Conversion</h2>
+          <label>USD: <input type="text" name="USDCAD" /></label>
+          <label>CAD: <input type="text" name="CAD" /></label>
+        </div>
+      </div>
+    </div>
+
+    <h1>Countries I Want to Travel to</h1>
+
+    <script>
+      let response;
+      const inputArray = document.querySelectorAll("input");
+
+      document.addEventListener("DOMContentLoaded", function () {
+        const URL =
+          "https://api.exchangerate.host/latest?&base=USD&symbols=JPY,ISK,CAD";
+        const request = new XMLHttpRequest();
+        request.open("GET", URL);
+        request.responseType = "json";
+        request.send();
+
+        request.onload = function () {
+          response = request.response;
+        };
+      });
+
+      function exchange(currency) {
+        if (isNaN(parseFloat(currency.value))) {
+            currency.value = ""
+            alert("Please enter a number.")
+        } else {
+          if (currency.name.substring(0, 3) == "USD") {
+            const convCode = currency.name.substring(3, 6);
+            const conv =
+              parseFloat(currency.value) * response["rates"][convCode];
+            document.querySelector("input[name=" + convCode + "]").value = conv
+              .toFixed(2)
+              .toString()
+              .replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+          } else {
+            const conv =
+              parseFloat(currency.value) / response["rates"][currency.name];
+            document.querySelector(
+              "input[name=USD" + currency.name + "]"
+            ).value = conv
+              .toFixed(2)
+              .toString()
+              .replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+          }
+        }
+      }
+
+      for (let i = 0; i < inputArray.length; i++) {
+        inputArray[i].addEventListener("input", function () {
+          exchange(inputArray[i]);
+        });
+      }
     </script>
   </body>
 </html>

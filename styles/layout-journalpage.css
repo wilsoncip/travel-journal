@@ -8,7 +8,7 @@ body {
 
 .container {
   display: grid;
-  grid-template-columns: 1fr 8fr;
+  grid-template-columns: 3.5fr 10.5fr;
   grid-template-areas:
     "title-img title"
     "body-1 body-1";
@@ -16,6 +16,7 @@ body {
 
 .title-img {
   grid-area: title-img;
+  text-align: right;
 }
 .title {
   grid-area: title;
@@ -45,10 +46,7 @@ h1 {
 }
 div.title-img img {
   width: 150px;
-  margin: 10px;
-  margin-top: 20px;
-  margin-left: 40px;
-  margin-right: 0;
+  margin: 20px 20px 30px 40px;
   box-shadow: 2px 2px darkgray;
   /* border: 1px solid darkgray; */
 }
@@ -74,7 +72,7 @@ h3{
 .body-main {
   background-color: rgb(228, 228, 228);
   border-radius: 40px;
-  margin: 20px 40px;
+  margin: 20px 200px;
   margin-top: 10px;
 }
 
@@ -85,12 +83,12 @@ h3{
 }
 
 .body-text {
-  margin: 0 80px 20px;
+  margin: 0 200px 75px;
 }
 
 .img-container {
   grid-template-columns: 1fr;
-  height: 500px;
+  height: 400px;
   margin: 10px 40px;
   justify-items: center;
   display: flex;
@@ -106,7 +104,7 @@ i {
   background-color: lightgrey;
   border-radius: 100px;
   padding: 20px;
-  margin: 0 40px;
+  margin: 0 20px;
   /* flex-basis: 50px;
   flex-grow: 0;
   flex-shrink: 0; */
