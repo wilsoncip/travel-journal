@@ -21,83 +21,6 @@
     <link rel="stylesheet" href="styles/sitemap.css" />
     <title>Contact Page</title>
     <link rel="icon" type="image/png" href="images/favicon.png" />
-    <style>
-      h1 {
-        font-size: 40px;
-        font-weight: bold;
-        margin: 20px;
-      }
-
-      .body-1 {
-        display: flex;
-      }
-
-      img {
-        width: 300px;
-        height: 300px;
-        margin: 20px;
-      }
-
-      .body-2 {
-        display: flex;
-        justify-content: center;
-      }
-
-      .body-3 {
-        display: flex;
-        margin-right: 50%;
-        margin-bottom: 0%;
-        align-items: center;
-      }
-
-      .body-4 {
-        margin-top: 10px;
-      }
-      .body-4 a {
-        padding: 0 5px;
-        color: navy;
-      }
-
-      form {
-        background-color: white;
-        padding: 20px;
-        width: 600px;
-        margin-top: 30px;
-      }
-      input {
-        margin-left: 5px;
-        width: 200px;
-      }
-      input,
-      textarea {
-        font-family: "Raleway", sans-serif;
-      }
-
-      button {
-        font-family: "Raleway", sans-serif;
-        font-size: 20px;
-        border-radius: 15px;
-        padding: 2px 8px;
-        border: 0;
-        color: black;
-        background-color: lightgrey;
-      }
-
-      fieldset {
-        border-color: lightgray;
-        border-style: solid;
-      }
-      legend {
-        font-weight: bold;
-        font-size: 25px;
-      }
-      .formtext {
-        margin: 10px 0;
-      }
-      .lessspace {
-        margin-bottom: 2px;
-      }
-    </style>
   </head>
   <body>
     <!-- Nav Bar for Mobile -->
@@ -160,7 +83,10 @@
     </div>
 
     <div class="container">
-      <div class="body-1"><h1>Contact Page: Wilson Ciputra</h1></div>
+      <div class="body-1">
+        <h1>Contact Page:</h1>
+        <h1>Wilson Ciputra</h1>
+      </div>
       <div class="body-2">
         <img
           src="images/wilson-portrait.jpg"
@@ -178,16 +104,15 @@
       </div>
       <div class="body-4">
         <a href="https://www.instagram.com/wilsoncipt/"
-          ><i class="fa-brands fa-square-instagram fa-lg"></i></a
+          ><i class="fa-brands fa-square-instagram fa-2x"></i></a
         ><a href="https://www.linkedin.com/in/wilsonciputra/"
-          ><i class="fa-brands fa-linkedin fa-lg"></i></a
+          ><i class="fa-brands fa-linkedin fa-2x"></i></a
         ><a href="mailto: wciputra1@babson.edu"
-          ><i class="fa-solid fa-square-envelope fa-lg"></i
+          ><i class="fa-solid fa-square-envelope fa-2x"></i
         ></a>
       </div>
       <div class="form">
-        <form action="" method="GET" onsubmit="validate()">
-          <!-- used GET method since POST method won't work with empty action-->
+        <form action="" method="POST" onsubmit="validate()">
           <fieldset>
             <legend>Contact Me</legend>
             <div class="formtext">
@@ -217,7 +142,7 @@
                   name="comments"
                   id="comments"
                   rows="5"
-                  cols="50"
+                  cols="30"
                 ></textarea>
               </div>
             </div>
@@ -235,28 +160,27 @@
     </div>
 
     <script>
-            // navbar clicking
-            let clicked = 0
+      // navbar clicking
+      let clicked = 0;
       function expand1() {
-        if (clicked == 0){
-          clicked +=1
-          document.querySelector(".dropdown1").style.display = "block"
-        }else{
-          clicked = 0
-          document.querySelector(".dropdown1").style.display = "none"
-        };
+        if (clicked == 0) {
+          clicked += 1;
+          document.querySelector(".dropdown1").style.display = "block";
+        } else {
+          clicked = 0;
+          document.querySelector(".dropdown1").style.display = "none";
+        }
       }
 
-      let clicked2 = 0
+      let clicked2 = 0;
       function expand2() {
-        if (clicked2 == 0){
-          clicked2 +=1
-          document.querySelector(".dropdown2").style.display = "block"
-        }else{
-          clicked2 = 0
-          document.querySelector(".dropdown2").style.display = "none"
+        if (clicked2 == 0) {
+          clicked2 += 1;
+          document.querySelector(".dropdown2").style.display = "block";
+        } else {
+          clicked2 = 0;
+          document.querySelector(".dropdown2").style.display = "none";
         }
-        ;
       }
 
       document.getElementById("drop1").addEventListener("click", function () {
@@ -266,15 +190,13 @@
         expand2();
       });
 
-
-
       function validate() {
         console.log("test");
-        x = document.querySelector("input[name=name]")
-        y = document.querySelector("input[name=email]")
-        z = document.querySelector("textarea[name=comments]")
-        if (x.value == "" && y.value == "" && z.value == ""){
-          alert("You have missing values in your form.")
+        x = document.querySelector("input[name=name]");
+        y = document.querySelector("input[name=email]");
+        z = document.querySelector("textarea[name=comments]");
+        if (x.value == "" && y.value == "" && z.value == "") {
+          alert("You have missing values in your form.");
         }
       }
     </script>
