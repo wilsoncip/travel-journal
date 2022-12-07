@@ -91,12 +91,7 @@
         <h1 class="title" id="title">Recent Journal Entries</h1>
 
         <div id="img1">
-          <img
-            class="item-img"
-            src="images/dotonburi-small.jpg"
-            alt="dotonburi"
-            title="Dotonburi District"
-          />
+          <img class="item-img" src="images/dotonburi-small.jpg" alt="japan" />
         </div>
 
         <div class="body-text" id="text1">
@@ -113,8 +108,7 @@
           <img
             class="item-img"
             src="images/skogafoss-small.jpg"
-            alt="skogafoss"
-            title="The Waterfall Skogafoss"
+            alt="iceland"
           />
         </div>
 
@@ -125,7 +119,7 @@
             plains as far as the eyes can see. This country holds some of the
             most beautiful views that can't be found anywhere else in the world.
           </p>
-          <a href="japan.html" class="item-link">Click here to read more</a>
+          <a href="iceland.html" class="item-link">Click here to read more</a>
         </div>
       </div>
 
@@ -157,35 +151,58 @@
     </div>
 
     <script>
-      // navbar clicking
-      let clicked = 0
-      function expand1() {
-        if (clicked == 0){
-          clicked +=1
-          document.querySelector(".dropdown1").style.display = "block"
-        }else{
-          clicked = 0
-          document.querySelector(".dropdown1").style.display = "none"
-        };
+      const japArray = [
+        "kyoto-city-small.jpg",
+        "akihabara-small.jpg",
+        "dotonburi-small.jpg",
+      ];
+      const japImg = document.querySelector("img[alt=japan]");
+
+      const iceArray = [
+        "skogafoss-small.jpg",
+        "black-sand-small.jpg",
+        "blue-lagoon-small.jpg",
+      ];
+      const iceImg = document.querySelector("img[alt=iceland]");
+
+      let counter = 0;
+      function changeImage() {
+        if (counter < 2) {
+          japImg.src = "images/" + japArray[counter];
+          iceImg.src = "images/" + iceArray[counter];
+          counter += 1;
+        } else {
+          japImg.src = "images/" + japArray[counter];
+          iceImg.src = "images/" + iceArray[counter];
+          counter = 0;
+        }
+
+        setTimeout(changeImage, 3000);
       }
 
-      let clicked2 = 0
-      function expand2() {
-        if (clicked2 == 0){
-          clicked2 +=1
-          document.querySelector(".dropdown2").style.display = "block"
-        }else{
-          clicked2 = 0
-          document.querySelector(".dropdown2").style.display = "none"
+      document.addEventListener("DOMContentLoaded", function () {
+        changeImage();
+      });
+
+      // navbar clicking
+      let clicked = [0, 0];
+      function expand(index) {
+        if (clicked[index] == 0) {
+          clicked[index] += 1;
+          number = index + 1;
+          document.querySelector(".dropdown" + number).style.display = "block";
+        } else {
+          clicked[index] = 0;
+          number = index + 1;
+          document.querySelector(".dropdown" + number).style.display = "none";
         }
-        ;
       }
 
       document.getElementById("drop1").addEventListener("click", function () {
-        expand1();
+        expand(0);
       });
       document.getElementById("drop2").addEventListener("click", function () {
-        expand2();
+        expand(1);
       });
     </script>
   </body>

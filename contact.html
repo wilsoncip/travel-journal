@@ -112,7 +112,7 @@
         ></a>
       </div>
       <div class="form">
-        <form action="" method="POST" onsubmit="validate()">
+        <form action="" method="GET">
           <fieldset>
             <legend>Contact Me</legend>
             <div class="formtext">
@@ -147,7 +147,7 @@
               </div>
             </div>
             <div class="formtext">
-              <button type="submit" name="submit" value="Submit">Submit</button>
+              <button id="sub" type="submit" name="submit" value="Submit">Submit</button>
               <button type="reset" name="reset" value="Reset">Reset</button>
             </div>
           </fieldset>
@@ -160,45 +160,42 @@
     </div>
 
     <script>
-      // navbar clicking
-      let clicked = 0;
-      function expand1() {
-        if (clicked == 0) {
-          clicked += 1;
-          document.querySelector(".dropdown1").style.display = "block";
-        } else {
-          clicked = 0;
-          document.querySelector(".dropdown1").style.display = "none";
+      function validate() {
+        x = document.querySelector("input[name=name]");
+        y = document.querySelector("input[name=email]");
+        z = document.querySelector("textarea[name=comments]");
+        if (x.value == "" || y.value == "" || z.value == "") {
+          alert("You have missing values in your form.");
+          document.getElementById('sub').disabled = true;
+        } else{
+          document.getElementById('sub').disabled = false;
         }
       }
 
-      let clicked2 = 0;
-      function expand2() {
-        if (clicked2 == 0) {
-          clicked2 += 1;
-          document.querySelector(".dropdown2").style.display = "block";
+      document.querySelector("button[type=submit]").onclick = function () {
+        validate();
+      };
+
+      // navbar clicking
+      let clicked = [0, 0];
+      function expand(index) {
+        if (clicked[index] == 0) {
+          clicked[index] += 1;
+          number = index + 1;
+          document.querySelector(".dropdown" + number).style.display = "block";
         } else {
-          clicked2 = 0;
-          document.querySelector(".dropdown2").style.display = "none";
+          clicked[index] = 0;
+          number = index + 1;
+          document.querySelector(".dropdown" + number).style.display = "none";
         }
       }
 
       document.getElementById("drop1").addEventListener("click", function () {
-        expand1();
+        expand(0);
       });
       document.getElementById("drop2").addEventListener("click", function () {
-        expand2();
+        expand(1);
       });
-
-      function validate() {
-        console.log("test");
-        x = document.querySelector("input[name=name]");
-        y = document.querySelector("input[name=email]");
-        z = document.querySelector("textarea[name=comments]");
-        if (x.value == "" && y.value == "" && z.value == "") {
-          alert("You have missing values in your form.");
-        }
-      }
     </script>
   </body>
 </html>

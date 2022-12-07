@@ -105,6 +105,10 @@
   }
 
   /* body-2 styles */
+  img{
+    border-radius: 40px;
+  }
+
   .body-2 {
     margin: 30px;
     text-align: center;
@@ -269,6 +273,10 @@
   }
 
   /* body-2 styles */
+  img{
+    border-radius: 40px;
+  }
+
   .item-img {
     width: 80%;
     min-width: 180px;

@@ -19,6 +19,39 @@
     <link rel="icon" type="image/png" href="images/favicon.png" />
   </head>
   <body>
+    <!-- Nav Bar for Mobile -->
+    <div class="mobile">
+      <div>
+        <span class="pads"
+          ><i id="drop1" class="fa-solid fa-bars fa-3x"></i
+        ></span>
+        <div class="dropdown1">
+          <a class="nav-items nav-links dropitems" href="index.html">Home</a>
+          <a class="nav-items nav-links dropitems" href="country_profiles.html"
+            >Country Profiles</a
+          >
+          <div class="nav-items nav-links dropitems">
+            <span id="drop2" class="pads">Journal Entries</span>
+            <div class="dropdown2">
+              <a class="nav-items nav-links dropitems" href="japan.html"
+                >Japan</a
+              >
+              <a class="nav-items nav-links dropitems" href="iceland.html"
+                >Iceland</a
+              >
+              <a class="nav-items nav-links dropitems" href="canada.html"
+                >Canada</a
+              >
+            </div>
+          </div>
+          <a class="nav-items nav-links dropitems" href="contact.html"
+            >Contact</a
+          >
+        </div>
+      </div>
+    </div>
+
+    <!-- Nav Bar for Desktop -->
     <div class="header">
       <div class="nav-items">
         <a class="nav-links" href="index.html">Home</a>
@@ -74,7 +107,12 @@
       </div>
 
       <div class="body-text">
-        <h2 id="location">The Skógafoss Waterfall</h2>
+        <h2>
+          <a id="location" href="https://goo.gl/maps/c8wWmM1atq3gMoUr9"
+            ><i class="fa-sharp fa-solid fa-location-dot"></i> The Skógafoss
+            Waterfall, Skógar</a
+          >
+        </h2>
         <p id="description">
           Iceland is probably most well-known for all its waterfalls, but my
           favorite has to be Skógafoss. Encased within an indentation of the
@@ -95,11 +133,11 @@
     </div>
 
     <script>
-      const imageArray = ["skogafoss", "black_sand", "blue_lagoon"];
+      const imageArray = ["skogafoss", "black-sand", "blue-lagoon"];
       const titleArray = [
-        "The Skógafoss Waterfall",
-        "The Reynisfjara Black Sand Beach",
-        "The Blue Lagoon Hotsprings",
+        "The Skógafoss Waterfall, Skógar",
+        "The Reynisfjara Black Sand Beach, Vik",
+        "The Blue Lagoon Hotsprings, Grindavík",
       ];
       const textArray = [
         `Iceland is probably most well-known for all its waterfalls, but my
@@ -133,6 +171,11 @@
         and completely satisfied with my experience here in Iceland.`,
       ];
       const pageArray = document.querySelectorAll("h3");
+      const gmapArray = [
+        "https://goo.gl/maps/c8wWmM1atq3gMoUr9",
+        "https://goo.gl/maps/QLcfvZm8XWcfrmA56",
+        "https://goo.gl/maps/mMaHoe3e7JEbiJgQ8",
+      ];
       const imgEl = document.getElementById("main-frame");
       const textEl = document.getElementById("description");
       const titleEl = document.getElementById("location");
@@ -143,7 +186,10 @@
           index -= 1;
           imgEl.src = "images/" + imageArray[index] + ".jpg";
           imgEl.alt = imageArray[index];
-          titleEl.innerHTML = titleArray[index];
+          titleEl.innerHTML =
+            "<i class='fa-sharp fa-solid fa-location-dot'></i> " +
+            titleArray[index];
+          titleEl.href = gmapArray[index];
           textEl.innerHTML = textArray[index];
           pageArray[index + 1].style.fontWeight = "lighter";
           pageArray[index + 1].style.fontSize = "1em";
@@ -157,7 +203,10 @@
           index += 1;
           imgEl.src = "images/" + imageArray[index] + ".jpg";
           imgEl.alt = imageArray[index];
-          titleEl.innerHTML = titleArray[index];
+          titleEl.innerHTML =
+            "<i class='fa-sharp fa-solid fa-location-dot'></i> " +
+            titleArray[index];
+          titleEl.href = gmapArray[index];
           textEl.innerHTML = textArray[index];
           pageArray[index - 1].style.fontWeight = "lighter";
           pageArray[index - 1].style.fontSize = "1em";
@@ -173,6 +222,27 @@
       document.getElementById("switch2").onclick = function () {
         changeRight();
       };
+
+      // navbar clicking
+      let clicked = [0, 0];
+      function expand(index) {
+        if (clicked[index] == 0) {
+          clicked[index] += 1;
+          number = index + 1;
+          document.querySelector(".dropdown" + number).style.display = "block";
+        } else {
+          clicked[index] = 0;
+          number = index + 1;
+          document.querySelector(".dropdown" + number).style.display = "none";
+        }
+      }
+
+      document.getElementById("drop1").addEventListener("click", function () {
+        expand(0);
+      });
+      document.getElementById("drop2").addEventListener("click", function () {
+        expand(1);
+      });
     </script>
   </body>
 </html>
