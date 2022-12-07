@@ -20,125 +20,125 @@
     <style>
       @media (max-width: 1000px) {
         .container {
-        margin-top: 30px;
-        display: flex;
-        flex-direction: column;
-        column-gap: 50px;
-        justify-content: center;
-        align-items: center;
-      }
+          margin-top: 30px;
+          display: flex;
+          flex-direction: column;
+          column-gap: 50px;
+          justify-content: center;
+          align-items: center;
+        }
 
-      .box {
-        margin-bottom: 50px;
-        background-color: rgba(247, 240, 240, 0.98);
-        width: 70%;
-        padding: 30px;
-        border-radius: 40px;
-      }
+        .box {
+          margin-bottom: 50px;
+          background-color: rgba(247, 240, 240, 0.98);
+          width: 70%;
+          padding: 30px;
+          border-radius: 40px;
+        }
 
-      p {
-        text-align: left;
-        margin: 10px 30px;
-      }
+        p {
+          text-align: left;
+          margin: 10px 30px;
+        }
 
-      .box a {
-        font-size: smaller;
-        text-align: unset;
-        margin: 10px 60px;
-      }
+        .box a {
+          font-size: smaller;
+          text-align: unset;
+          margin: 10px 60px;
+        }
 
-      h1 {
-        text-align: center;
-      }
+        h1 {
+          text-align: center;
+        }
 
-      h2 {
-        margin-top: 30px;
-        font-size: larger;
-      }
+        h2 {
+          margin-top: 30px;
+          font-size: larger;
+        }
 
-      .img-container {
-        display: flex;
-        justify-content: center;
-      }
+        .img-container {
+          display: flex;
+          justify-content: center;
+        }
 
-      img {
-        width: 70%;
-      }
+        img {
+          width: 70%;
+        }
 
-      .conversion {
-        text-align: center;
-      }
-      .conversion label {
-        margin: 10px;
-        font-size: 20;
-        display: block;
-      }
+        .conversion {
+          text-align: center;
+        }
+        .conversion label {
+          margin: 10px;
+          font-size: 20;
+          display: block;
+        }
 
-      input {
-        height: 24px;
-        font-size: 18px;
-        width: 150px;
-      }
+        input {
+          height: 24px;
+          font-size: 18px;
+          width: 150px;
+        }
       }
       @media (min-width: 1000px) {
         .container {
-        margin-top: 30px;
-        display: flex;
-        column-gap: 50px;
-        justify-content: center;
-      }
+          margin-top: 30px;
+          display: flex;
+          column-gap: 50px;
+          justify-content: center;
+        }
 
-      .box {
-        margin-bottom: 50px;
-        background-color: rgba(247, 240, 240, 0.98);
-        width: 25%;
-        padding: 30px;
-        border-radius: 40px;
-      }
+        .box {
+          margin-bottom: 50px;
+          background-color: rgba(247, 240, 240, 0.98);
+          width: 25%;
+          padding: 30px;
+          border-radius: 40px;
+        }
 
-      p {
-        text-align: left;
-        margin: 10px 60px;
-      }
+        p {
+          text-align: left;
+          margin: 10px 60px;
+        }
 
-      .box a {
-        font-size: smaller;
-        text-align: unset;
-        margin: 10px 60px;
-      }
+        .box a {
+          font-size: smaller;
+          text-align: unset;
+          margin: 10px 60px;
+        }
 
-      h1 {
-        text-align: center;
-      }
+        h1 {
+          text-align: center;
+        }
 
-      h2 {
-        margin-top: 30px;
-        font-size: larger;
-      }
+        h2 {
+          margin-top: 30px;
+          font-size: larger;
+        }
 
-      .img-container {
-        display: flex;
-        justify-content: center;
-      }
+        .img-container {
+          display: flex;
+          justify-content: center;
+        }
 
-      img {
-        width: 70%;
-      }
+        img {
+          width: 70%;
+        }
 
-      .conversion {
-        text-align: center;
-      }
-      .conversion label {
-        margin: 10px;
-        font-size: 20;
-        display: block;
-      }
+        .conversion {
+          text-align: center;
+        }
+        .conversion label {
+          margin: 10px;
+          font-size: 20;
+          display: block;
+        }
 
-      input {
-        height: 24px;
-        font-size: 18px;
-        width: 150px;
-      }
+        input {
+          height: 24px;
+          font-size: 18px;
+          width: 150px;
+        }
       }
     </style>
   </head>
@@ -271,6 +271,11 @@
         <p>Total Area: 1,220,813 Sq. Km.</p>
         <p>Currency: South African Rand (R)</p>
         <a href="https://www.britannica.com/facts/Japan">Source: Britannica</a>
+        <div class="conversion">
+          <h2>Currency Conversion</h2>
+          <label>USD: <input type="text" name="USDZAR" /></label>
+          <label>ZAR: <input type="text" name="ZAR" /></label>
+        </div>
       </div>
 
       <div class="box">
@@ -285,6 +290,11 @@
         <a href="https://www.britannica.com/facts/Iceland"
           >Source: Britannica</a
         >
+        <div class="conversion">
+          <h2>Currency Conversion</h2>
+          <label>USD: <input type="text" name="USDTHB" /></label>
+          <label>THB: <input type="text" name="THB" /></label>
+        </div>
       </div>
 
       <div class="box">
@@ -297,6 +307,11 @@
         <p>Total Area: 132,049 Sq. Km.</p>
         <p>Currency: Euro (€)</p>
         <a href="https://www.britannica.com/facts/Canada">Source: Britannica</a>
+        <div class="conversion">
+          <h2>Currency Conversion</h2>
+          <label>USD: <input type="text" name="USDEUR" value=""/></label>
+          <label>EUR: <input type="text" name="EUR" /></label>
+        </div>
       </div>
     </div>
 
@@ -307,7 +322,7 @@
       document.addEventListener("DOMContentLoaded", function () {
         // https://exchangerate.host/#/#docs
         const URL =
-          "https://api.exchangerate.host/latest?&base=USD&symbols=JPY,ISK,CAD";
+          "https://api.exchangerate.host/latest?&base=USD&symbols=JPY,ISK,CAD,ZAR,THB,EUR";
         const request = new XMLHttpRequest();
         request.open("GET", URL);
         request.responseType = "json";
