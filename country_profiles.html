@@ -18,7 +18,70 @@
     <link rel="icon" type="image/png" href="images/favicon.png" />
     <title>Document</title>
     <style>
-      .container {
+      @media (max-width: 1000px) {
+        .container {
+        margin-top: 30px;
+        display: flex;
+        flex-direction: column;
+        column-gap: 50px;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .box {
+        margin-bottom: 50px;
+        background-color: rgba(247, 240, 240, 0.98);
+        width: 70%;
+        padding: 30px;
+        border-radius: 40px;
+      }
+
+      p {
+        text-align: left;
+        margin: 10px 30px;
+      }
+
+      .box a {
+        font-size: smaller;
+        text-align: unset;
+        margin: 10px 60px;
+      }
+
+      h1 {
+        text-align: center;
+      }
+
+      h2 {
+        margin-top: 30px;
+        font-size: larger;
+      }
+
+      .img-container {
+        display: flex;
+        justify-content: center;
+      }
+
+      img {
+        width: 70%;
+      }
+
+      .conversion {
+        text-align: center;
+      }
+      .conversion label {
+        margin: 10px;
+        font-size: 20;
+        display: block;
+      }
+
+      input {
+        height: 24px;
+        font-size: 18px;
+        width: 150px;
+      }
+      }
+      @media (min-width: 1000px) {
+        .container {
         margin-top: 30px;
         display: flex;
         column-gap: 50px;
@@ -75,6 +138,7 @@
         height: 24px;
         font-size: 18px;
         width: 150px;
+      }
       }
     </style>
   </head>
@@ -197,44 +261,44 @@
 
     <h1>Countries I Want to Travel to</h1>
     <div class="container">
-        <div class="box">
-          <div class="img-container">
-            <img src="images/south-africa.webp" alt="south-africa" />
-          </div>
-          <h1>South Africa</h1>
-          <p>Capital: Pretoria, Bloemfontein, Cape Town</p>
-          <p>Population: 60,970,000 (2022)</p>
-          <p>Total Area: 1,220,813 Sq. Km.</p>
-          <p>Currency: South African Rand (R)</p>
-          <a href="https://www.britannica.com/facts/Japan">Source: Britannica</a>
+      <div class="box">
+        <div class="img-container">
+          <img src="images/south-africa.webp" alt="south-africa" />
         </div>
-  
-        <div class="box">
-          <div class="img-container">
-            <img src="images/thailand.webp" alt="thailand" />
-          </div>
-          <h1>Thailand</h1>
-          <p>Capital: Bangkok</p>
-          <p>Population: 67,083,000 (2022)</p>
-          <p>Total Area: 513,120 Sq. Km.</p>
-          <p>Currency: Thai Baht (฿)</p>
-          <a href="https://www.britannica.com/facts/Iceland"
-            >Source: Britannica</a
-          >
-        </div>
-  
-        <div class="box">
-          <div class="img-container">
-            <img src="images/greece.webp" alt="greece" />
-          </div>
-          <h1>Greece</h1>
-          <p>Capital: Athens</p>
-          <p>Population: 10,619,000 (2022)</p>
-          <p>Total Area: 132,049 Sq. Km.</p>
-          <p>Currency: Euro (€)</p>
-          <a href="https://www.britannica.com/facts/Canada">Source: Britannica</a>
-        </div>
+        <h1>South Africa</h1>
+        <p>Capital: Pretoria, Bloemfontein, Cape Town</p>
+        <p>Population: 60,970,000 (2022)</p>
+        <p>Total Area: 1,220,813 Sq. Km.</p>
+        <p>Currency: South African Rand (R)</p>
+        <a href="https://www.britannica.com/facts/Japan">Source: Britannica</a>
       </div>
+
+      <div class="box">
+        <div class="img-container">
+          <img src="images/thailand.webp" alt="thailand" />
+        </div>
+        <h1>Thailand</h1>
+        <p>Capital: Bangkok</p>
+        <p>Population: 67,083,000 (2022)</p>
+        <p>Total Area: 513,120 Sq. Km.</p>
+        <p>Currency: Thai Baht (฿)</p>
+        <a href="https://www.britannica.com/facts/Iceland"
+          >Source: Britannica</a
+        >
+      </div>
+
+      <div class="box">
+        <div class="img-container">
+          <img src="images/greece.webp" alt="greece" />
+        </div>
+        <h1>Greece</h1>
+        <p>Capital: Athens</p>
+        <p>Population: 10,619,000 (2022)</p>
+        <p>Total Area: 132,049 Sq. Km.</p>
+        <p>Currency: Euro (€)</p>
+        <a href="https://www.britannica.com/facts/Canada">Source: Britannica</a>
+      </div>
+    </div>
 
     <script>
       let response;
@@ -257,7 +321,6 @@
       function exchange(currency) {
         if (isNaN(parseFloat(currency.value))) {
           currency.value = "";
-          alert("Please enter a number.");
         } else {
           if (currency.name.substring(0, 3) == "USD") {
             const convCode = currency.name.substring(3, 6);
